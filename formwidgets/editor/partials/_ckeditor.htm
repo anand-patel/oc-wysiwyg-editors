@@ -1,0 +1,14 @@
+<div data-control="wysiwyg">
+    <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+</div>
+        <script>
+    $(document).ready( function()
+    {
+        var editor = $('[data-control="wysiwyg"] textarea').ckeditor({
+            width:    '<?php echo $width; ?>',
+            height:   '<?php echo $height; ?>',
+            filebrowserBrowseUrl: '<?php echo URL::to('elfinder/ckeditor4'); ?>',
+        });
+    });
+
+</script>

@@ -1,0 +1,24 @@
+
+<textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+
+<script>
+    $(function() {
+        $("#<?php echo $this->getId('textarea') ?>").editable({
+            inlineMode: false,
+            width:    '<?php echo $width; ?>',
+            height:   '<?php echo $height; ?>',
+            imageUploadURL: '<?php echo URL::to('image_upload'); ?>',
+            imageUploadParams: {id: "my_editor"},
+            imageDeleteURL: '<?php echo URL::to('delete_image'); ?>',
+
+        })
+            // Catch image removal from the editor.
+                .on('editable.afterRemoveImage', function (e, editor, $img) {
+                    // Set the image source to the image delete params.
+                    editor.options.imageDeleteParams = {src: $img.attr('src')};
+
+                    // Make the delete request.
+                    editor.deleteImage($img);
+                });
+    });
+</script>

@@ -1,0 +1,66 @@
+tabs:
+  fields:
+    editor:
+      label: Select editor
+      type: dropdown
+      default: tinymce
+      options:
+         tinymce: Tiny MCE
+         ckeditor: CKEditor
+         richeditor: October`s Rich Editor
+         froala: Froala
+      tab: Settings
+
+    editor_width:
+       label: Editor width
+       placeholder: 100%
+       type: text
+       span: left
+       tab: Settings
+
+    editor_height:
+       label: Editor height
+       placeholder: 500px
+       type: text
+       span: right
+       tab: Settings
+
+    cms_page_as_wysiwyg:
+        label: Use for CMS - Page?
+        type: switch
+        span: left
+        default: false
+        comment: Use Wysiwyg editor in CMS page
+        tab : Content
+
+    cms_content_as_wysiwyg:
+      label: Use for CMS - Content?
+      type: switch
+      span: right
+      default: false
+      comment: Use Wysiwyg editor in CMS Content
+      tab : Content
+
+    cms_partial_as_wysiwyg:
+        label: Use for CMS - Partial?
+        type: switch
+        span: left
+        default: false
+        comment: Use Wysiwyg editor in CMS Partial
+        tab : Content
+
+    cms_layout_as_wysiwyg:
+        label: Use for CMS - Layout?
+        type: switch
+        span: right
+        default: false
+        comment: Use Wysiwyg editor in CMS Layout
+        tab : Content
+
+    others_as_wysiwyg:
+        label: Use for others?
+        type: switch
+        span: left
+        default: false
+        comment: Replace all instance of Code Editor to Wysiwyg Editor in all plugins except CMS(Page, Partial, Layout, Content)
+        tab : Content

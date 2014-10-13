@@ -1,0 +1,43 @@
+<div data-control="wysiwyg">
+    <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+</div>
+<script>
+    $(document).ready( function() {
+        tinymce.init({
+            selector: 'textarea#<?php echo $this->getId('textarea') ?>',
+            theme: "modern",
+            setup: function (editor) {
+                editor.on('change', function () {
+                    tinymce.triggerSave();
+                });
+            },
+            width:    '<?php echo $width; ?>',
+            height:   '<?php echo $height; ?>',
+            plugins : [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality emoticons template paste textcolor"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | preview",
+            file_browser_callback : elFinderBrowser
+
+        });
+
+        function elFinderBrowser (field_name, url, type, win) {
+            tinymce.activeEditor.windowManager.open({
+                file: '<?php echo URL::to('elfinder/tinymce'); ?>',// use an absolute path!
+                title: 'elFinder 2.0',
+                width: 900,
+                height: 450,
+                resizable: 'yes'
+            }, {
+                setUrl: function (url) {
+                    win.document.getElementById(field_name).value = url;
+                }
+            });
+            return false;
+        }
+
+    } );
+
+</script>
