@@ -1,9 +1,15 @@
 /*!
- * froala_editor v1.2.2 (http://editor.froala.com)
+ * froala_editor v1.2.4 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 .gray-theme.froala-box .html-switch {
   border-color: #aaaaaa;
+}
+.gray-theme.froala-box .froala-wrapper.f-basic {
+  border: solid 1px #75706b;
+}
+.gray-theme.froala-box .froala-wrapper.f-basic.f-placeholder + span.fr-placeholder {
+  margin: 10px;
 }
 .gray-theme.froala-box .froala-element hr {
   border-top-color: #d1d5d8;
@@ -45,7 +51,7 @@
 }
 .gray-theme.froala-box .froala-element span.f-img-editor:before {
   border: solid 2px #ffffff !important;
-  outline: solid 1px #252525 !important;
+  outline: solid 1px #75706b !important;
 }
 .gray-theme.froala-box .froala-element span.f-img-editor.fr-fil {
   margin: 10px 10px 10px 3px;
@@ -59,14 +65,19 @@
 .gray-theme.froala-box .froala-element span.f-img-handle {
   height: 13px;
   width: 13px;
-  border: solid 1px #252525 !important;
+  border: solid 1px #75706b !important;
   background: #ffffff;
 }
 .gray-theme.froala-box .froala-element span.f-video-editor.active:after {
-  border: solid 1px #252525;
+  border: solid 1px #75706b;
 }
 .gray-theme.froala-box .froala-element.f-basic {
-  border: solid 1px #75706b;
+  background: transparent;
+  color: '#444';
+  padding: 10px;
+}
+.gray-theme.froala-box .froala-element.f-basic a {
+  color: inherit;
 }
 .gray-theme.froala-box .froala-element table td {
   border: solid 1px #d1d5d8;
@@ -146,6 +157,9 @@
 .gray-theme.froala-editor .fr-trigger.active:after {
   border-top-color: #ffffff !important;
 }
+.gray-theme.froala-editor .fr-dropdown .fr-trigger {
+  width: calc(40px - 2px);
+}
 .gray-theme.froala-editor .fr-dropdown .fr-dropdown-menu {
   background: #ffffff;
   border: solid 1px #75706b;
@@ -196,18 +210,14 @@
 .gray-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu p a.fr-bttn:hover {
   color: #28324e;
 }
-.gray-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn {
-  border: solid 1px #ffffff;
-}
 .gray-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn.active {
-  border: solid 1px #ffffff;
   outline: solid 1px #75706b;
 }
 .gray-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn.active:after {
   color: #ffffff;
 }
 .gray-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn:hover:not(:focus):not(:active) {
-  border: solid 1px #75706b;
+  outline: solid 1px #75706b;
 }
 .gray-theme.froala-editor .froala-popup {
   background: #ffffff;
@@ -227,19 +237,23 @@
 .gray-theme.froala-editor .froala-popup h4 i:hover {
   color: #28324e;
 }
-.gray-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger) {
+.gray-theme.froala-editor .froala-popup button.fr-p-bttn {
   color: #ffffff;
 }
-.gray-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger).f-ok {
+.gray-theme.froala-editor .froala-popup button.fr-p-bttn.f-ok {
   background: #75706b;
   color: #ffffff;
 }
-.gray-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger).f-unlink {
+.gray-theme.froala-editor .froala-popup button.fr-p-bttn.f-unlink {
   background: #28324e;
   color: #ffffff;
 }
-.gray-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger):hover,
-.gray-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger):focus {
+.gray-theme.froala-editor .froala-popup button.fr-p-bttn.f-unlink:hover {
+  background: #d1d5d8;
+  color: #28324e;
+}
+.gray-theme.froala-editor .froala-popup button.fr-p-bttn:hover,
+.gray-theme.froala-editor .froala-popup button.fr-p-bttn:focus {
   background: #d1d5d8;
   color: #28324e;
 }
@@ -341,6 +355,10 @@
 .gray-theme.froala-modal .f-modal-wrapper div.f-image-list div .f-delete-img {
   background: #28324e;
   color: #ffffff;
+}
+.gray-theme.froala-modal .f-modal-wrapper div.f-image-list div .f-delete-img:hover {
+  background: #d1d5d8;
+  color: #28324e;
 }
 .gray-theme.froala-modal .f-modal-wrapper div.f-image-list:not(.f-touch) div:hover .f-delete-img:hover {
   background: #d1d5d8;

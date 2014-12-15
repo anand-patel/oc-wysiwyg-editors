@@ -1,9 +1,15 @@
 /*!
- * froala_editor v1.2.2 (http://editor.froala.com)
+ * froala_editor v1.2.4 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 .royal-theme.froala-box .html-switch {
   border-color: #aaaaaa;
+}
+.royal-theme.froala-box .froala-wrapper.f-basic {
+  border: solid 1px #553982;
+}
+.royal-theme.froala-box .froala-wrapper.f-basic.f-placeholder + span.fr-placeholder {
+  margin: 10px;
 }
 .royal-theme.froala-box .froala-element hr {
   border-top-color: #cccccc;
@@ -45,7 +51,7 @@
 }
 .royal-theme.froala-box .froala-element span.f-img-editor:before {
   border: solid 2px #ffffff !important;
-  outline: solid 1px #252525 !important;
+  outline: solid 1px #553982 !important;
 }
 .royal-theme.froala-box .froala-element span.f-img-editor.fr-fil {
   margin: 10px 10px 10px 3px;
@@ -59,14 +65,19 @@
 .royal-theme.froala-box .froala-element span.f-img-handle {
   height: 13px;
   width: 13px;
-  border: solid 1px #252525 !important;
+  border: solid 1px #553982 !important;
   background: #ffffff;
 }
 .royal-theme.froala-box .froala-element span.f-video-editor.active:after {
-  border: solid 1px #252525;
+  border: solid 1px #553982;
 }
 .royal-theme.froala-box .froala-element.f-basic {
-  border: solid 1px #553982;
+  background: transparent;
+  color: '#444';
+  padding: 10px;
+}
+.royal-theme.froala-box .froala-element.f-basic a {
+  color: inherit;
 }
 .royal-theme.froala-box .froala-element table td {
   border: solid 1px #cccccc;
@@ -146,6 +157,9 @@
 .royal-theme.froala-editor .fr-trigger.active:after {
   border-top-color: #ffffff !important;
 }
+.royal-theme.froala-editor .fr-dropdown .fr-trigger {
+  width: calc(40px - 2px);
+}
 .royal-theme.froala-editor .fr-dropdown .fr-dropdown-menu {
   background: #ffffff;
   border: solid 1px #553982;
@@ -196,18 +210,14 @@
 .royal-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu p a.fr-bttn:hover {
   color: #9365b8;
 }
-.royal-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn {
-  border: solid 1px #ffffff;
-}
 .royal-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn.active {
-  border: solid 1px #ffffff;
   outline: solid 1px #553982;
 }
 .royal-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn.active:after {
   color: #ffffff;
 }
 .royal-theme.froala-editor .fr-dropdown.fr-color-picker .fr-dropdown-menu .fr-color-bttn:hover:not(:focus):not(:active) {
-  border: solid 1px #553982;
+  outline: solid 1px #553982;
 }
 .royal-theme.froala-editor .froala-popup {
   background: #ffffff;
@@ -227,19 +237,23 @@
 .royal-theme.froala-editor .froala-popup h4 i:hover {
   color: #553982;
 }
-.royal-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger) {
+.royal-theme.froala-editor .froala-popup button.fr-p-bttn {
   color: #ffffff;
 }
-.royal-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger).f-ok {
+.royal-theme.froala-editor .froala-popup button.fr-p-bttn.f-ok {
   background: #553982;
   color: #ffffff;
 }
-.royal-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger).f-unlink {
+.royal-theme.froala-editor .froala-popup button.fr-p-bttn.f-unlink {
   background: #b8312f;
   color: #ffffff;
 }
-.royal-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger):hover,
-.royal-theme.froala-editor .froala-popup button:not(.fr-bttn):not(.fr-trigger):focus {
+.royal-theme.froala-editor .froala-popup button.fr-p-bttn.f-unlink:hover {
+  background: #9365b8;
+  color: #ffffff;
+}
+.royal-theme.froala-editor .froala-popup button.fr-p-bttn:hover,
+.royal-theme.froala-editor .froala-popup button.fr-p-bttn:focus {
   background: #9365b8;
   color: #ffffff;
 }
@@ -340,6 +354,10 @@
 }
 .royal-theme.froala-modal .f-modal-wrapper div.f-image-list div .f-delete-img {
   background: #b8312f;
+  color: #ffffff;
+}
+.royal-theme.froala-modal .f-modal-wrapper div.f-image-list div .f-delete-img:hover {
+  background: #9365b8;
   color: #ffffff;
 }
 .royal-theme.froala-modal .f-modal-wrapper div.f-image-list:not(.f-touch) div:hover .f-delete-img:hover {
