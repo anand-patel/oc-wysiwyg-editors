@@ -1,8 +1,9 @@
 1.0.1: First version of Wysiwyg Editors
 1.0.2: Automatic Injection to CMS & other codeeditors and October CMS`s Rich Editor Added
 1.0.3: Automatic Injection to RainLab Static Pages & other plugin`s option is appear only if installed
-1.0.4: New Froala editor added(on request from emzero439), Height & width property added for editor ,setting moved to My Setting tab and minor changes in settings
+1.0.4: New Froala editor added (on request from emzero439), Height & width property added for editor, setting moved to My Setting tab and minor changes in settings
 1.0.5: Automatic Injection to Radiantweb`s Problog and ProEvents(option available in settings-content)
 1.0.6: CKEditor updated and Bug fixes
-1.0.7: Integrated elFinder(file browser) with Tiny MCE & CKEditor, Image upload/delete for Froala Editor
-1.0.8: Added security to File Browser`s route(Authenticate users can only access File Browser)
+1.0.7: Integrated elFinder (file browser) with Tiny MCE & CKEditor, Image upload/delete for Froala Editor
+1.0.8: Added security to File Browser`s route (Authenticate users can only access File Browser)
+1.0.9: Update CKEditor, Froala and TinyMCE.
