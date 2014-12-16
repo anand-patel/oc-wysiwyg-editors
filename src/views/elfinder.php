@@ -5,9 +5,9 @@
     <title>elFinder 2.0</title>
 
     <!-- jQuery and jQuery UI (REQUIRED) -->
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
     <!-- elFinder CSS (REQUIRED) -->
     <link rel="stylesheet" type="text/css" href="<?php echo URL::to('plugins/anandpatel/wysiwygeditors/public/css/elfinder.min.css'); ?>">
@@ -16,7 +16,7 @@
     <!-- elFinder JS (REQUIRED) -->
     <script src="<?php echo URL::to('plugins/anandpatel/wysiwygeditors/public/js/elfinder.min.js'); ?>"></script>
 
-    <?php if($locale){ ?>
+    <?php if ($locale) { ?>
     <!-- elFinder translation (OPTIONAL) -->
     <script src="<?= asset($dir."/js/i18n/elfinder.$locale.js") ?>"></script>
     <?php } ?>
@@ -27,8 +27,8 @@
         // https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
         $().ready(function() {
             $('#elfinder').elfinder({
-                // set your elFinder options here
-                <?php if($locale){ ?>
+                // Set your elFinder options here.
+                <?php if ($locale) { ?>
                     lang: '<?= $locale ?>', // locale
                 <?php } ?>
                 url : '<?= URL::action('Barryvdh\Elfinder\ElfinderController@showConnector') ?>'  // connector URL
