@@ -80,7 +80,7 @@ class Plugin extends PluginBase
                             'span'    => 'left',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.problog.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.settings'
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
                 }
@@ -94,7 +94,7 @@ class Plugin extends PluginBase
                             'span'    => 'left',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.proevent.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.settings'
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
                 }
@@ -108,7 +108,7 @@ class Plugin extends PluginBase
                             'span'    => 'left',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.spages.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.settings'
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
                 }
@@ -122,7 +122,7 @@ class Plugin extends PluginBase
                             'span'    => 'left',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.blog.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.settings'
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
                 }
@@ -136,7 +136,7 @@ class Plugin extends PluginBase
                             'span'    => 'left',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.apages.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.settings'
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
                 }
