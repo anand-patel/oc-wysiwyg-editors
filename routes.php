@@ -1,18 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Anand
- * Date: 11-10-2014
- * Time: 17:40
- */
 
 use Backend\Facades\BackendAuth;
 
-
-/*
+/**
  * Filter to Authenticate Backend User
  */
-
 Route::filter('authenticate', function()
 {
     if (!BackendAuth::check())
@@ -21,74 +13,71 @@ Route::filter('authenticate', function()
     }
 });
 
-
-/*
+/**
  * Routes for CKEditor, TinyMCE and Froala
  */
-
-Route::group(array('before' => 'authenticate'), function() {
-
-    /*
+Route::group(array('before' => 'authenticate'), function()
+{
+    /**
      * elFinder routes
      */
-
     Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
     Route::get('elfinder/ckeditor4', 'Barryvdh\Elfinder\ElfinderController@showCKeditor4');
     Route::get('elfinder/tinymce', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
 
-    /*
+    /**
      * Froala Image upload
      */
-
-    Route::post("image_upload", function () {
+    Route::post('image_upload', function()
+    {
         // Allowed extentions.
-        $allowedExts = array("gif", "jpeg", "jpg", "png");
+        $allowedExts = array('gif', 'jpeg', 'jpg', 'png');
 
         // Get filename.
-        $temp = explode(".", $_FILES["file"]["name"]);
+        $temp = explode('.', $_FILES['file']['name']);
 
         // Get extension.
         $extension = end($temp);
 
         // An image check is being done in the editor but it is best to
         // check that again on the server side.
-        // Do not use $_FILES["file"]["type"] as it can be easily forged.
+        // Do not use $_FILES['file']['type'] as it can be easily forged.
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = finfo_file($finfo, $_FILES["file"]["tmp_name"]);
+        $mime = finfo_file($finfo, $_FILES['file']['tmp_name']);
 
-        if ((($mime == "image/gif")
-                || ($mime == "image/jpeg")
-                || ($mime == "image/pjpeg")
-                || ($mime == "image/x-png")
-                || ($mime == "image/png"))
+        if ((($mime == 'image/gif')
+                || ($mime == 'image/jpeg')
+                || ($mime == 'image/pjpeg')
+                || ($mime == 'image/x-png')
+                || ($mime == 'image/png'))
             && in_array($extension, $allowedExts)
         ) {
             // Generate new random name.
-            $name = sha1(microtime()) . "." . $extension;
+            $name = sha1(microtime()).'.'.$extension;
 
             // Save file in the uploads folder.
-            move_uploaded_file($_FILES["file"]["tmp_name"], getcwd() . "/uploads/public/" . $name);
+            move_uploaded_file($_FILES['file']['tmp_name'], getcwd().'/uploads/public/'.$name);
 
             // Generate response.
             $response = new StdClass;
-            $response->link = asset("/uploads/public/" . $name);
+            $response->link = asset('/uploads/public/'.$name);
             echo stripslashes(json_encode($response));
         }
     });
 
-    /*
+    /**
      * Froala Image Delete
      */
-
-    Route::post("delete_image", function () {
+    Route::post('delete_image', function()
+    {
         // Get src.
-        $src = basename($_POST["src"]);
+        $src = basename($_POST['src']);
 
         // Check if file exists.
-        if (file_exists(getcwd() . "/uploads/public/" . $src)) {
+        if (file_exists(getcwd().'/uploads/public/'.$src))
+        {
             // Delete file.
-            unlink(getcwd() . "/uploads/public/" . $src);
+            unlink(getcwd().'/uploads/public/'.$src);
         }
-
     });
 });

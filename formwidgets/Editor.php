@@ -1,16 +1,15 @@
-<?php
-namespace AnandPatel\WysiwygEditors\FormWidgets;
+<?php namespace AnandPatel\WysiwygEditors\FormWidgets;
 
 use Backend\Classes\FormWidgetBase;
 use AnandPatel\WysiwygEditors\Models\Settings;
 
-class Editor extends FormWidgetBase{
-
+class Editor extends FormWidgetBase
+{
     public function widgetDetails()
     {
         return [
-                'name'        => 'Wysiwyg Editors',
-                'description' => 'Renders a wysiwyg editor of user`s choice'
+            'name'        => 'anandpatel.wysiwygeditors::lang.widget.name',
+            'description' => 'anandpatel.wysiwygeditors::lang.widget.description'
         ];
     }
 
@@ -23,26 +22,28 @@ class Editor extends FormWidgetBase{
 
     public function prepareVars()
     {
-        $this->vars['name']  = $this->formField->getName();
+        $this->vars['name'] = $this->formField->getName();
         $this->vars['value'] = $this->model->{$this->columnName};
-        $this->vars['width'] = (empty(Settings::instance()->editor_width)) ? "100%" : Settings::instance()->editor_width;
-        $this->vars['height']= (empty(Settings::instance()->editor_height)) ? "500px" : Settings::instance()->editor_height;
+        $this->vars['width'] = (empty(Settings::instance()->editor_width)) ? '100%' : Settings::instance()->editor_width;
+        $this->vars['height'] = (empty(Settings::instance()->editor_height)) ? '500px' : Settings::instance()->editor_height;
     }
 
     public function loadAssets()
     {
         $editor = Settings::instance()->editor;
 
-        if( $editor == "tinymce")
+        if ($editor == 'tinymce')
+        {
             $this->addJs('tinymce/tinymce.min.js');
+        }
 
-        if( $editor == "ckeditor" )
+        if ($editor == 'ckeditor')
         {
             $this->addJs('ckeditor/ckeditor.js');
             $this->addJs('ckeditor/adapters/jquery.js');
         }
 
-        if( $editor == "froala" )
+        if ($editor == 'froala')
         {
             $this->addCss('froala/css/font-awesome.min.css');
             $this->addCss('froala/css/froala_editor.min.css');
@@ -57,5 +58,4 @@ class Editor extends FormWidgetBase{
             $this->addJs('froala/js/plugins/tables.min.js');
         }
     }
-
-} 
+}

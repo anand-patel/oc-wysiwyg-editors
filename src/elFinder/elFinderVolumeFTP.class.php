@@ -98,6 +98,24 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 		$this->options['mimeDetect'] = 'internal';
 	}
 	
+	/**
+	 * Prepare
+	 * Call from elFinder::netmout() before volume->mount()
+	 *
+	 * @return Array
+	 * @author Naoki Sawada
+	 **/
+	public function netmountPrepare($options) {
+		if (!empty($_REQUEST['encoding']) && @iconv('UTF-8', $_REQUEST['encoding'], '') !== false) {
+			$options['encoding'] = $_REQUEST['encoding'];
+			if (!empty($_REQUEST['locale']) && @setlocale(LC_ALL, $_REQUEST['locale'])) {
+				setlocale(LC_ALL, elFinder::$locale);
+				$options['locale'] = $_REQUEST['locale'];
+			}
+		}
+		return $options;
+	}
+	
 	/*********************************************************************/
 	/*                        INIT AND CONFIGURE                         */
 	/*********************************************************************/
@@ -195,6 +213,13 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 		if (!ftp_login($this->connect, $this->options['user'], $this->options['pass'])) {
 			$this->umount();
 			return $this->setError('Unable to login into '.$this->options['host']);
+		}
+		
+		// try switch utf8 mode
+		if ($this->encoding) {
+			@ftp_exec($this->connect, 'OPTS UTF8 OFF');
+		} else {
+			@ftp_exec($this->connect, 'OPTS UTF8 ON' );
 		}
 		
 		// switch off extended passive mode - may be usefull for some servers
@@ -339,26 +364,22 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 	 * @return void
 	 * @author Dmitry Levashov
 	 **/
-	protected function cacheDir($path) {
-		$this->dirsCache[$path] = array();
+ 	protected function cacheDir($path) {
+ 		$this->dirsCache[$path] = array();
 
-		if (preg_match('/\'|\"/', $path)) {
-			foreach (ftp_nlist($this->connect, $path) as $p) {
-				if (($stat = $this->_stat($p)) &&empty($stat['hidden'])) {
-					// $files[] = $stat;
-					$this->dirsCache[$path][] = $p;
-				}
-			}
-			return;
-		}
-		foreach (ftp_rawlist($this->connect, $path) as $raw) {
+		$list = array();
+		foreach (ftp_rawlist($this->connect, $this->convEncIn($path)) as $raw) {
 			if (($stat = $this->parseRaw($raw))) {
-				$p    = $path.'/'.$stat['name'];
-				$stat = $this->updateCache($p, $stat);
-				if (empty($stat['hidden'])) {
-					// $files[] = $stat;
-					$this->dirsCache[$path][] = $p;
-				}
+				$list[] = $stat;
+			}
+		}
+		$list = $this->convEncOut($list);
+		foreach($list as $stat) {
+			$p    = $path.'/'.$stat['name'];
+			$stat = $this->updateCache($p, $stat);
+			if (empty($stat['hidden'])) {
+				// $files[] = $stat;
+				$this->dirsCache[$path][] = $p;
 			}
 		}
 	}
@@ -529,7 +550,7 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 	 * @author Dmitry (dio) Levashov
 	 **/
 	protected function _stat($path) {
-		$raw = ftp_raw($this->connect, 'MLST '.$path);
+		$raw = ftp_raw($this->connect, 'MLST "'.addslashes($path).'"');
 
 		if (is_array($raw) && count($raw) > 1 && substr(trim($raw[0]), 0, 1) == 2) {
 			$parts = explode(';', trim($raw[1]));
@@ -640,15 +661,6 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 	 **/
 	protected function _subdirs($path) {
 		
-		if (preg_match('/\s|\'|\"/', $path)) {
-			foreach (ftp_nlist($this->connect, $path) as $p) {
-				if (($stat = $this->stat($path.'/'.$p)) && $stat['mime'] == 'directory') {
-					return true;
-				}
-			}
-			return false;
-		}
-		
 		foreach (ftp_rawlist($this->connect, $path) as $str) {
 			if (($stat = $this->parseRaw($str)) && $stat['mime'] == 'directory') {
 				return true;
@@ -683,13 +695,13 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 	protected function _scandir($path) {
 		$files = array();
 
-		foreach (ftp_rawlist($this->connect, $path) as $str) {
-			if (($stat = $this->parseRaw($str))) {
-				$files[] = $path.DIRECTORY_SEPARATOR.$stat['name'];
-			}
-		}
+ 		foreach (ftp_rawlist($this->connect, $path) as $str) {
+ 			if (($stat = $this->parseRaw($str))) {
+ 				$files[] = $path.DIRECTORY_SEPARATOR.$stat['name'];
+ 			}
+ 		}
 
-		return $files;
+ 		return $files;
 	}
 		
 	/**
@@ -951,12 +963,12 @@ class elFinderVolumeFTP extends elFinderVolumeDriver {
 					if (is_dir($p) && $this->_findSymlinks($p)) {
 						return true;
 					} elseif (is_file($p)) {
-						$this->archiveSize += filesize($p);
+						$this->archiveSize += sprintf('%u', filesize($p));
 					}
 				}
 			}
 		} else {
-			$this->archiveSize += filesize($path);
+			$this->archiveSize += sprintf('%u', filesize($path));
 		}
 		
 		return false;

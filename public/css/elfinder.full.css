@@ -1,13 +1,13 @@
 /*!
  * elFinder - file manager for web
- * Version 2.1 (Nightly: 595cc96) (2014-04-24)
+ * Version 2.1 (Nightly: 836a743) (2014-12-21)
  * http://elfinder.org
  * 
- * Copyright 2009-2013, Studio 42
+ * Copyright 2009-2014, Studio 42
  * Licensed under a 3 clauses BSD license
  */
 
-/* File: /home/osc/elFinder-build/elFinder/css/commands.css */
+/* File: /css/commands.css */
 /******************************************************************/
 /*                          COMMANDS STYLES                       */
 /******************************************************************/
@@ -177,6 +177,19 @@
 	border:1px solid #ccc;
 }
 
+/********************** COMMAND "SORT" ****************************/
+/* for list table header sort triangle icon */
+div.elfinder-cwd-wrapper-list tr.ui-state-default td {
+	position: relative;
+}
+div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
+	position: absolute;
+	top: -5px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
 
 /********************** COMMAND "HELP" ****************************/
 /* help dialog */
@@ -265,7 +278,7 @@
 
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/common.css */
+/* File: /css/common.css */
 /*********************************************/
 /*            COMMON ELFINDER STUFFS         */
 /*********************************************/
@@ -369,7 +382,7 @@
 
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/contextmenu.css */
+/* File: /css/contextmenu.css */
 /* menu and submenu */
 .elfinder-contextmenu,
 .elfinder-contextmenu-sub {
@@ -396,6 +409,16 @@
 	white-space:nowrap;
 	cursor:default;
 }
+.elfinder-contextmenu-item .ui-icon {
+	width:16px;
+	height:16px;
+	position:absolute;
+	left:2px;
+	top:50%;
+	margin-top:-8px;
+	display:none;
+}
+
 /* text in item */
 .elfinder-contextmenu .elfinder-contextmenu-item span { display:block; }
 
@@ -440,7 +463,7 @@
 	margin:0 1px;
 }
 
-/* File: /home/osc/elFinder-build/elFinder/css/cwd.css */
+/* File: /css/cwd.css */
 /******************************************************************/
 /*                     CURRENT DIRECTORY STYLES                   */
 /******************************************************************/
@@ -460,6 +483,8 @@
 	cursor:default;
 	padding:0;
 	margin:0;
+	-ms-touch-action: auto;
+	touch-action: auto;
 	-moz-user-select: -moz-none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
@@ -633,11 +658,17 @@
 
 /*.elfinder-cwd-view-list { padding:0 0 4px 0; }*/
 
-.elfinder-cwd table { width:100%; border-collapse:collapse; border:0 solid; margin:0 0 10px 0; }
+.elfinder-cwd table { 
+	width: 100%;
+	border-collapse: separate;
+	border: 0 solid;
+	margin: 0 0 10px 0;
+	border-spacing: 0;
+}
 .elfinder .elfinder-cwd table thead tr { border-left:0 solid; border-top:0 solid; border-right:0 solid; }
 
 .elfinder .elfinder-cwd table td { 
-	padding:3px 12px;
+	padding:4px 12px;
 	white-space:pre;
 	overflow:hidden;
 	text-align:right;
@@ -683,7 +714,7 @@
 
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/dialog.css */
+/* File: /css/dialog.css */
 /*********************************************/
 /*                DIALOGS STYLES             */
 /*********************************************/
@@ -932,7 +963,7 @@
 
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/fonts.css */
+/* File: /css/fonts.css */
 .elfinder-contextmenu .elfinder-contextmenu-item span { font-size:.76em; }
 
 .elfinder-cwd-view-icons .elfinder-cwd-filename { font-size:.7em; }
@@ -956,7 +987,7 @@
 .elfinder-drag-num { font-size:12px; }
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/navbar.css */
+/* File: /css/navbar.css */
 /*********************************************/
 /*              NAVIGATION PANEL             */
 /*********************************************/
@@ -1117,9 +1148,9 @@
 
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/places.css */
+/* File: /css/places.css */
 
-/* File: /home/osc/elFinder-build/elFinder/css/quicklook.css */
+/* File: /css/quicklook.css */
 /* quicklook window */
 .elfinder-quicklook {
 	position:absolute;
@@ -1385,7 +1416,7 @@ embed.elfinder-quicklook-preview-audio {
 
 
 
-/* File: /home/osc/elFinder-build/elFinder/css/statusbar.css */
+/* File: /css/statusbar.css */
 /******************************************************************/
 /*                           STATUSBAR STYLES                     */
 /******************************************************************/
@@ -1424,7 +1455,7 @@ embed.elfinder-quicklook-preview-audio {
 
 .elfinder-stat-selected { white-space:nowrap; overflow:hidden; }
 
-/* File: /home/osc/elFinder-build/elFinder/css/toolbar.css */
+/* File: /css/toolbar.css */
 /*********************************************/
 /*               TOOLBAR STYLES              */
 /*********************************************/
