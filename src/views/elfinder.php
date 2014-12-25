@@ -29,17 +29,17 @@
             $('#elfinder').elfinder({
                 // Set your elFinder options here.
                 <?php if ($locale) { ?>
-                    lang: '<?= $locale ?>', // locale
+                    lang: '<?= $locale ?>', // Locale
                 <?php } ?>
-                url : '<?= URL::action('Barryvdh\Elfinder\ElfinderController@showConnector') ?>'  // connector URL
+                url : '<?= URL::action('Barryvdh\Elfinder\ElfinderController@showConnector') ?>' // Connector URL
             });
         });
     </script>
 </head>
 <body>
 
-<!-- Element where elFinder will be created (REQUIRED) -->
-<div id="elfinder"></div>
+    <!-- Element where elFinder will be created (REQUIRED) -->
+    <div id="elfinder"></div>
 
 </body>
 </html>

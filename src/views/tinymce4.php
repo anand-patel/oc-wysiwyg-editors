@@ -5,9 +5,9 @@
     <title>elFinder 2.0</title>
 
     <!-- jQuery and jQuery UI (REQUIRED) -->
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
     <!-- elFinder CSS (REQUIRED) -->
     <link rel="stylesheet" type="text/css" href="<?php echo URL::to('plugins/anandpatel/wysiwygeditors/public/css/elfinder.min.css'); ?>">
@@ -16,7 +16,7 @@
     <!-- elFinder JS (REQUIRED) -->
     <script src="<?php echo URL::to('plugins/anandpatel/wysiwygeditors/public/js/elfinder.min.js'); ?>"></script>
 
-    <?php if($locale){ ?>
+    <?php if ($locale) { ?>
         <!-- elFinder translation (OPTIONAL) -->
         <script src="<?= asset($dir."/js/i18n/elfinder.$locale.js") ?>"></script>
     <?php } ?>
@@ -28,33 +28,35 @@
                 // Here goes your code for setting your custom things onLoad.
             },
             mySubmit: function (URL) {
-                // pass selected file path to TinyMCE
+                // Pass selected file path to TinyMCE.
                 parent.tinymce.activeEditor.windowManager.getParams().setUrl(URL);
 
-                // close popup window
+                // Close popup window.
                 parent.tinymce.activeEditor.windowManager.close();
             }
         }
 
         $().ready(function() {
             var elf = $('#elfinder').elfinder({
-                // set your elFinder options here
-                <?php if($locale){ ?>
-                    lang: '<?= $locale ?>', // locale
+                // Set your elFinder options here.
+                <?php if ($locale) { ?>
+                    lang: '<?= $locale ?>', // Locale
                 <?php } ?>
-                <?php if($csrf){ ?>
+                <?php if ($csrf) { ?>
                 customData: { _token:  '<?php echo csrf_token(); ?>' },
                 <?php } ?>
-                url: '<?= URL::action('Barryvdh\Elfinder\ElfinderController@showConnector') ?>',  // connector URL
-                getFileCallback: function(file) { // editor callback
-                    FileBrowserDialogue.mySubmit(file.url); // pass selected file path to TinyMCE
+                url: '<?= URL::action('Barryvdh\Elfinder\ElfinderController@showConnector') ?>', // Connector URL
+                getFileCallback: function(file) { // Editor callback
+                    FileBrowserDialogue.mySubmit(file.url); // Pass selected file path to TinyMCE.
                 }
             }).elfinder('instance');
         });
     </script>
 </head>
 <body>
+
     <!-- Element where elFinder will be created (REQUIRED) -->
     <div id="elfinder"></div>
+
 </body>
 </html>
