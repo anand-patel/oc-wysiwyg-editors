@@ -1,11 +1,9 @@
-<?php
-
-namespace AnandPatel\WysiwygEditors\models;
+<?php namespace AnandPatel\WysiwygEditors\models;
 
 use Model;
 
-class Settings extends Model{
-
+class Settings extends Model
+{
     public $implement = ['System.Behaviors.SettingsModel'];
 
     // A unique code
@@ -15,5 +13,4 @@ class Settings extends Model{
     public $settingsFields = 'fields.yaml';
 
     protected $cache = [];
-
-} 
+}
