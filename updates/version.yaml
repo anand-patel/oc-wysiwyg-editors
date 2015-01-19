@@ -8,3 +8,4 @@
 1.0.8: Added security to File Browser`s route (Authenticate users can only access File Browser).
 1.0.9: Update CKEditor, Froala and TinyMCE.
 1.1.0: Support multilanguage, update elFinder and cleanup code.
+1.1.1: Added Turkish languages
