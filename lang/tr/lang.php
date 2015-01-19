@@ -2,17 +2,17 @@
 
 return [
     'plugin' => [
-        'name' => 'Wysiwyg Editörleri',
-        'description' => 'Wysiwyg Editorünüzü to CMS ve diğer Kod Editörüne ekleyin'
+        'name' => 'Metin Editörleri',
+        'description' => 'Metin Editorünüzü CMS ve diğer Kod Editörüne ekleyin'
     ],
     'settings' => [
-        'label' => 'Wysiwyg Editörleri',
-        'description' => 'Wysiwyg editör tercihlerini bu bölümden yapılandırabilirsiniz.'
+        'label' => 'Metin Editörleri',
+        'description' => 'Metin editör tercihlerini bu bölümden yapılandırabilirsiniz.'
     ],
     'widget' => [
         'label' => 'Wysiwyg',
-        'name' => 'Wysiwyg Editörleri',
-        'description' => 'Kullanıcının seçtiği bir wysiwyg editörü oluşturur',
+        'name' => 'Metin Editörleri',
+        'description' => 'Kullanıcının seçtiği bir metin editörü oluşturur',
     ],
     'form' => [
         'settings' => [
@@ -21,44 +21,44 @@ return [
             'editor_height' => 'Editör Yüksekliği'
         ],
         'page' => [
-            'label' => 'CMS için kullanım - Sayfa?',
-            'comment' => 'CMS sayfasında Wysiwyg editörü kullanın'
+            'label' => 'Sayfa için kullanım',
+            'comment' => 'Sayfa düzenleme bölümünde Metin editörü kullanın'
         ],
         'content' => [
-            'label' => 'CMS için kullanım - İçerik?',
-            'comment' => 'CMS içeriğinde Wysiwyg editörü kullanın'
+            'label' => 'İçerik için kullanım',
+            'comment' => 'İçerik düzenleme bölümünde Metin editörü kullanın'
         ],
         'partial' => [
-            'label' => 'CMS için kullanım - Kısmi?',
-            'comment' => 'CMS parçasında Wysiwyg editörü kullanın'
+            'label' => 'Parça metinler için kullanım',
+            'comment' => 'Parça metinler için Metin editörü kullanın'
         ],
         'layout' => [
-            'label' => 'CMS için kullanım - Layout?',
-            'comment' => 'CMS layoutunda Wysiwyg editörü kullanın'
+            'label' => 'Şablonlar için kullanım',
+            'comment' => 'Şablon düzenleme bölümünde Metin editörü kullanın'
         ],
         'others' => [
-            'label' => 'Diğerleri için kullanım?',
-            'comment' => 'CMS (Page, Kısmi, Düzen, İçerik) dışındaki tüm eklentileri Kod Editöründen Wysiwyg Editöre değiştirin'
+            'label' => 'Diğer modüller için kullanım',
+            'comment' => '(Sayfa, Parça metinler, Şablonlar, İçerik) dışındaki tüm eklentiler için de seçilen Metin Editörünü kullan'
         ],
         'problog' => [
-            'label' => 'Radiantweb Problog için kullanım?',
-            'comment' => 'Radientweb Problog eklentisinde gönderi editörü olarak Wysiwyg editörü kullan'
+            'label' => 'Radiantweb Problog için kullanım',
+            'comment' => 'Radientweb Problog modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
         'proevent' => [
-            'label' => 'Radiantweb ProEvents için kullanım?',
-            'comment' => 'Radiantweb ProEvents eklentisinde gönderi editörü olarak Wysiwyg editörü kullan'
+            'label' => 'Radiantweb ProEvents için kullanım',
+            'comment' => 'Radiantweb ProEvents modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
         'spages' => [
-            'label' => 'RainLab Static sayfalar için kullanım?',
-            'comment' => 'RainLab Static sayfalar eklentisinde gönderi editörü olarak Wysiwyg editörü kullan'
+            'label' => 'Sabit sayfalar için kullanım',
+            'comment' => 'Sabit sayfalar modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
         'blog' => [
-            'label' => 'RainLab Blog için kullanım?',
-            'comment' => 'RainLab Blog eklentisinde gönderi editörü olarak Wysiwyg editörü kullan'
+            'label' => 'Blog için kullanım',
+            'comment' => 'Blog modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
         'apages' => [
-            'label' => 'Autumn Sayfalar için kullanım?',
-            'comment' => 'Autumn Sayfalar eklentisinde gönderi editörü olarak Wysiwyg editörü kullan'
+            'label' => 'Autumn Sayfalar için kullanım',
+            'comment' => 'Autumn Sayfalar modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
         'tab' => [
             'settings' => 'Ayarlar',
