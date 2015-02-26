@@ -56,11 +56,11 @@ Route::group(array('before' => 'authenticate'), function()
             $name = sha1(microtime()).'.'.$extension;
 
             // Save file in the uploads folder.
-            move_uploaded_file($_FILES['file']['tmp_name'], getcwd().'/uploads/public/'.$name);
+            move_uploaded_file($_FILES['file']['tmp_name'], getcwd().'/storage/app/uploads/'.$name);
 
             // Generate response.
             $response = new StdClass;
-            $response->link = asset('/uploads/public/'.$name);
+            $response->link = asset('/storage/app/uploads/'.$name);
             echo stripslashes(json_encode($response));
         }
     });
@@ -74,10 +74,10 @@ Route::group(array('before' => 'authenticate'), function()
         $src = basename($_POST['src']);
 
         // Check if file exists.
-        if (file_exists(getcwd().'/uploads/public/'.$src))
+        if (file_exists(getcwd().'/storage/app/uploads/'.$src))
         {
             // Delete file.
-            unlink(getcwd().'/uploads/public/'.$src);
+            unlink(getcwd().'/storage/app/uploads/'.$src);
         }
     });
 });
