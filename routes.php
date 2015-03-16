@@ -23,7 +23,7 @@ Route::group(array('before' => 'authenticate'), function()
      */
     Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
     Route::get('elfinder/ckeditor4', 'Barryvdh\Elfinder\ElfinderController@showCKeditor4');
-    Route::get('elfinder/tinymce', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
+    Route::get('elfinder/tinymce4', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
 
     /**
      * Froala Image upload
