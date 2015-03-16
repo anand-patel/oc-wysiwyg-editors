@@ -1,6 +1,7 @@
 /*!
- * froala_editor v1.2.4 (http://editor.froala.com)
- * Copyright 2014-2014 Froala
+ * froala_editor v1.2.6 (http://editor.froala.com)
+ * License http://editor.froala.com/license
+ * Copyright 2014-2015 Froala Labs
  */
 
 /**
@@ -9,7 +10,7 @@
 
 $.Editable.LANGS['nb'] = {
   translation: {
-    "Bold": "Halvfet",
+    "Bold": "Fet",
     "Italic": "Kursiv",
     "Underline": "Understreket",
     "Strikethrough": "Gjennomstreket",

@@ -1,11 +1,4 @@
-<?php  namespace AnandPatel\WysiwygEditors\Updates;
-/**
- * Created by PhpStorm.
- * User: anand.patel
- * Date: 3/13/2015
- * Time: 2:53 PM
- */
-
+<?php namespace AnandPatel\WysiwygEditors\Updates;
 
 use Artisan;
 use Exception;
