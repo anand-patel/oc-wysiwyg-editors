@@ -1,7 +1,8 @@
 {
     "name": "barryvdh/laravel-elfinder",
-	"keywords": ["laravel", "elfinder", "tinymce", "filebrowser"],
+    "keywords": ["laravel", "elfinder", "tinymce", "filebrowser"],
     "description": "A Laravel Package to integrate elFinder 2",
+    "license": "MIT",
     "authors": [
         {
             "name": "Barry vd. Heuvel",
@@ -9,15 +10,18 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.x"
+        "php": ">=5.4.0",
+        "barryvdh/elfinder-builds": "2.1.x",
+        "barryvdh/elfinder-flysystem-driver": "0.1.x@dev"
     },
     "autoload": {
-        "classmap": [
-            "src/elFinder"
-        ],
-        "psr-0": {
-            "Barryvdh\\Elfinder": "src/"
+        "psr-4": {
+            "Barryvdh\\Elfinder\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3-dev"
         }
     },
     "minimum-stability": "dev"

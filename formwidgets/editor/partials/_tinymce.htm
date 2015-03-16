@@ -11,6 +11,7 @@
                     tinymce.triggerSave();
                 });
             },
+            relative_urls: false,
             width:    '<?php echo $width; ?>',
             height:   '<?php echo $height; ?>',
             plugins : [
@@ -25,7 +26,7 @@
 
         function elFinderBrowser (field_name, url, type, win) {
             tinymce.activeEditor.windowManager.open({
-                file: '<?php echo URL::to('elfinder/tinymce'); ?>',// use an absolute path!
+                file: '<?php echo URL::to('elfinder/tinymce4'); ?>',// use an absolute path!
                 title: 'elFinder 2.0',
                 width: 900,
                 height: 450,
