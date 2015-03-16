@@ -1,55 +1,49 @@
 /*!
- * froala_editor v1.2.4 (http://editor.froala.com)
- * Copyright 2014-2014 Froala
+ * froala_editor v1.2.6 (http://editor.froala.com)
+ * License http://editor.froala.com/license
+ * Copyright 2014-2015 Froala Labs
  */
-.froala-element img.fr-fil,
-img.fr-tag.fr-fil {
+img.fr-fil {
   z-index: 1;
   position: relative;
-  vertical-align: top;
-  display: block;
   margin: auto;
   overflow: auto;
   padding: 10px 10px 10px 3px;
   float: left !important;
 }
-.froala-element img.fr-fil.fr-tni,
-img.fr-tag.fr-fil.fr-tni {
+img.fr-fil.fr-dib {
   float: none !important;
   margin-left: 0 !important;
 }
-.froala-element img.fr-fir,
-img.fr-tag.fr-fir {
+img.fr-fir {
   z-index: 1;
   position: relative;
-  vertical-align: top;
-  display: block;
   margin: auto;
   overflow: auto;
   padding: 10px 3px 10px 10px;
   float: right !important;
 }
-.froala-element img.fr-fir.fr-tni,
-img.fr-tag.fr-fir.fr-tni {
+img.fr-fir.fr-dib {
   float: none !important;
   margin-right: 0 !important;
 }
-.froala-element img.fr-fin,
-img.fr-tag.fr-fin {
+img.fr-fin {
   z-index: 1;
   position: relative;
-  vertical-align: top;
-  display: block;
   margin: auto;
   overflow: auto;
-  padding: 10px 0;
   float: none;
 }
-.froala-element a.fr-file,
+img.fr-fin.fr-dib {
+  padding: 10px 0;
+}
+img.fr-dib {
+  vertical-align: top;
+  display: block;
+}
 a.fr-file {
   position: relative;
 }
-.froala-element a.fr-file:before,
 a.fr-file:before {
   position: relative;
   display: inline-block;
@@ -63,7 +57,7 @@ a.fr-file:before {
   top: 0;
   padding-right: 3px;
 }
-.froala-element table,
+.froala-view table,
 table.fr-tag {
   border-collapse: collapse;
   empty-cells: show;
@@ -74,18 +68,18 @@ table.fr-tag {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.froala-element table td,
+.froala-view table td,
 table.fr-tag td {
   border: solid 1px #cccccc;
   padding: 5px;
 }
-.froala-element table th,
+.froala-view table th,
 table.fr-tag th {
   background: #e6e6e6;
   border: solid 1px #cccccc;
   padding: 5px;
 }
-.froala-element pre,
+.froala-view pre,
 pre.fr-tag {
   white-space: pre-wrap;
   /* CSS3 */
@@ -106,8 +100,9 @@ pre.fr-tag {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  font-family: "Courier New", Courier, monospace;
 }
-.froala-element blockquote,
+.froala-view blockquote,
 blockquote.fr-tag {
   margin-left: 20px;
   margin-right: 0;
@@ -117,7 +112,7 @@ blockquote.fr-tag {
   font-style: italic;
   border-left: solid 5px #cccccc;
 }
-.froala-element hr,
+.froala-view hr,
 hr.fr-tag {
   height: 0px;
   border: 0;
@@ -136,4 +131,16 @@ hr.fr-tag {
 .fr-fvr {
   float: right;
   margin: 10px 1px 10px 10px;
+}
+.fr-tnv {
+  float: none !important;
+  margin: auto;
+  text-align: center;
+  display: block !important;
+}
+.fr-tnv.fr-fvl {
+  text-align: left;
+}
+.fr-tnv.fr-fvr {
+  text-align: right;
 }
