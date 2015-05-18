@@ -7,10 +7,11 @@ return array(
     | Upload dir
     |--------------------------------------------------------------------------
     |
-    | The dir where to store the images (relative from public)
+    | The dir where to store the images (relative path).
     |
     */
-    'dir' => ['storage/app/uploads/'],
+
+    'dir' => ['storage/app/'],
 
     /*
     |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ return array(
     |        'alias' => 'Local storage',
     |    ]
     */
+
     'disks' => [
 
     ],
@@ -40,7 +42,7 @@ return array(
 
     'route' => [
         'prefix' => 'elfinder',
-        'middleware' => null, //Set to null to disable middleware filter
+        'middleware' => null  // Set to null to disable middleware filter.
     ],
 
     /*
@@ -48,7 +50,7 @@ return array(
     | Access filter
     |--------------------------------------------------------------------------
     |
-    | Filter callback to check the files
+    | Filter callback to check the files.
     |
     */
 
@@ -76,6 +78,6 @@ return array(
     |
     */
 
-    'options' => array(),
+    'options' => array()
 
 );
