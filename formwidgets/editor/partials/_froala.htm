@@ -2,7 +2,9 @@
 <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
 
 <script>
-    $(function() {
+    
+    function froalaInit()
+    {
         $("#<?php echo $this->getId('textarea') ?>").editable({
             inlineMode: false,
             width:    '<?php echo $width; ?>',
@@ -20,5 +22,25 @@
                     // Make the delete request.
                     editor.deleteImage($img);
                 });
+    }
+    
+    $(function() {
+        if (typeof $("#<?php echo $this->getId('textarea') ?>").editable === 'undefined') {
+            $('head').append('<link rel="stylesheet" href="<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/css/font-awesome.min.css'); ?>" type="text/css" />');
+            $('head').append('<link rel="stylesheet" href="<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/css/froala_editor.min.css'); ?>" type="text/css" />');
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/froala_editor.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/video.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/block_styles.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/colors.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/char_counter.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/font_family.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/font_size.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/lists.min.js'); ?>', function () {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/tables.min.js'); ?>', function () {
+                froalaInit();
+            }); }); }); }); }); }); }); }); });
+        } else {
+            froalaInit();
+        }
     });
 </script>
