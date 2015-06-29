@@ -22,6 +22,7 @@
     function tinymceInit()
     {
         tinyMCE.baseURL = "<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce'); ?>";
+        tinyMCE.suffix = '.min';
         tinymce.init({
             selector: 'textarea#<?php echo $this->getId('textarea') ?>',
             theme: "modern",
@@ -40,7 +41,7 @@
             ],
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | preview",
             file_browser_callback : elFinderBrowser
-
+            
         });
     }
     
