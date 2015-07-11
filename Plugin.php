@@ -47,8 +47,6 @@ class Plugin extends PluginBase
                 'label'       => 'anandpatel.wysiwygeditors::lang.settings.label',
                 'description' => 'anandpatel.wysiwygeditors::lang.settings.description',
                 'icon'        => 'icon-pencil-square-o',
-                'context'     => 'mysettings',
-                'category'    =>  SettingsManager::CATEGORY_MYSETTINGS,
                 'class'       => 'AnandPatel\WysiwygEditors\Models\Settings',
                 'order'       => 100
             ]
