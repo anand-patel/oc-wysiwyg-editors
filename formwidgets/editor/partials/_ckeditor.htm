@@ -4,11 +4,25 @@
         <script>
     $(document).ready( function()
     {
-        var editor = $('[data-control="wysiwyg"] textarea').ckeditor({
-            width:    '<?php echo $width; ?>',
-            height:   '<?php echo $height; ?>',
-            filebrowserBrowseUrl: '<?php echo URL::to('elfinder/ckeditor4'); ?>',
-        });
+        function ckeditorInit()
+        {
+            var editor = $('[data-control="wysiwyg"] textarea').ckeditor({
+                width:    '<?php echo $width; ?>',
+                height:   '<?php echo $height; ?>',
+                filebrowserBrowseUrl: '<?php echo URL::to('elfinder/ckeditor4'); ?>',
+            });
+        }
+        
+        if (typeof CKEDITOR === 'undefined') {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/ckeditor/ckeditor.js'); ?>', function () {
+                $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/ckeditor/adapters/jquery.js'); ?>', function () {
+                    ckeditorInit();
+                });
+            });
+        } else {
+            ckeditorInit();
+        }
+        
     });
 
 </script>

@@ -2,7 +2,27 @@
     <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
 </div>
 <script>
-    $(document).ready( function() {
+    
+    function elFinderBrowser (field_name, url, type, win)
+    {
+        tinymce.activeEditor.windowManager.open({
+            file: '<?php echo URL::to('elfinder/tinymce4'); ?>',// use an absolute path!
+            title: 'elFinder 2.0',
+            width: 900,
+            height: 450,
+            resizable: 'yes'
+        }, {
+            setUrl: function (url) {
+                win.document.getElementById(field_name).value = url;
+            }
+        });
+        return false;
+    }
+
+    function tinymceInit()
+    {
+        tinyMCE.baseURL = "<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce'); ?>";
+        tinyMCE.suffix = '.min';
         tinymce.init({
             selector: 'textarea#<?php echo $this->getId('textarea') ?>',
             theme: "modern",
@@ -21,24 +41,18 @@
             ],
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | preview",
             file_browser_callback : elFinderBrowser
-
+            
         });
-
-        function elFinderBrowser (field_name, url, type, win) {
-            tinymce.activeEditor.windowManager.open({
-                file: '<?php echo URL::to('elfinder/tinymce4'); ?>',// use an absolute path!
-                title: 'elFinder 2.0',
-                width: 900,
-                height: 450,
-                resizable: 'yes'
-            }, {
-                setUrl: function (url) {
-                    win.document.getElementById(field_name).value = url;
-                }
+    }
+    
+    $(document).ready( function() {
+        if (typeof tinymce === 'undefined') {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce/tinymce.min.js'); ?>', function () {
+                tinymceInit();
             });
-            return false;
+        } else {
+            tinymceInit();
         }
-
     } );
 
 </script>
