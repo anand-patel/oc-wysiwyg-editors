@@ -204,11 +204,15 @@ class Plugin extends PluginBase
 
         function useWysiwyg($form)
         {
+            $replacable = [
+                'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg', 'richeditor', 'RainLab\Blog\FormWidgets\BlogMarkdown'
+            ];
+
             foreach ($form->getFields() as $field)
             {
                 if (!empty($field->config['type']))
                 {
-                    if ($field->config['type'] == 'codeeditor' || $field->config['type'] == 'Eein\Wysiwyg\FormWidgets\Trumbowyg' || $field->config['type'] == 'richeditor')
+                    if ( in_array($field->config['type'], $replacable) )
                     {
                         if (Settings::instance()->editor == 'richeditor')
                         {
