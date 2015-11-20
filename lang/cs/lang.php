@@ -15,15 +15,15 @@ return [
         'description' => 'Vykreslí Wysiwyg editor dle vašeho výběru',
     ],
     'form' => [
-	    'settings' => [
-		    'select_editor' => 'Použitý typ editoru',
-		    'editor_width' => 'Šířka editoru',
-		    'editor_height' => 'Výška editoru'
-	    ],
+        'settings' => [
+            'select_editor' => 'Použitý typ editoru',
+            'editor_width' => 'Šířka editoru',
+            'editor_height' => 'Výška editoru'
+        ],
 	    'page' => [
-		    'label' => 'Použít editor pro stránky?',
-		    'comment' => 'Použije editor pro stránky (Pages)'
-	    ],
+            'label' => 'Použít editor pro stránky?',
+            'comment' => 'Použije editor pro stránky (Pages)'
+        ],
         'content' => [
             'label' => 'Použít editor pro obsahové bloky?',
             'comment' => 'Použije editor pro obsahové bloky (Content)'
