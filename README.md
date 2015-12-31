@@ -30,16 +30,16 @@ If you like this plugin, give this plugin a Like or Make donation with PayPal.
 Wysiwyg editors by
 * [TinyMCE](http://www.tinymce.com/)
 * [CkEditor](http://ckeditor.com/)
-* [Froala](http://editor.froala.com/) (It is free only for non-commercial use, you hove to [purchase](http://editor.froala.com/pricing) a license for commercial use.)
+* [Froala](http://editor.froala.com/) (It is free only for non-commercial use, you have to [purchase](http://editor.froala.com/pricing) a license for commercial use.)
 * [elFinder](http://elfinder.org/) & [barryvdh](https://github.com/barryvdh/laravel-elfinder)
 
 
 ###Documentation
 ###Installation
-To install this plugin you have to click on __add to project__ or need to type __AnandPatel.WysiwygEditors__ in Backend *System > Updates > Install Plugin*
+To install this plugin you have to click on __add to project__ or type __AnandPatel.WysiwygEditors__ in Backend *System > Updates > Install Plugin*
 
 ####Configuration
-To configure this Plugin goto Backend *System* then find *My Settings* in left side bar, then click on *Wysiwyg Editors*, you will get Configuration options (refer screenshots).
+To configure this Plugin goto Backend *System* then find *My Settings* in left side bar, then click on *Wysiwyg Editors*, you will get Configuration options (refer to screenshots).
 
 ###FAQ
 1. How to install this plugin?
