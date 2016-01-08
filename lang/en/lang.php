@@ -38,7 +38,7 @@ return [
         ],
         'others' => [
             'label' => 'Use for others?',
-            'comment' => 'Replace all instance of Code Editor to Wysiwyg Editor in all plugins except CMS (Page, Partial, Layout, Content)'
+            'comment' => 'Replace every instance of Code Editor with Wysiwyg Editor in all plugins except CMS (Page, Partial, Layout, Content)'
         ],
         'problog' => [
             'label' => 'Use for Radiantweb Problog?',
