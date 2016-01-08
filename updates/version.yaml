@@ -18,3 +18,4 @@
 1.1.6: Changed destination folder.
 1.1.7: Added Czech language.
 1.1.8: Added Russian language.
+1.1.9: Fix hook and other issues(thanks to Vojta Svoboda)
