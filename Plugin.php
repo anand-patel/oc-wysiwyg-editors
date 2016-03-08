@@ -55,12 +55,6 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        \App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
-
-        $this->publishes([
-            __DIR__.'/config/elfinder.php' => config_path('elfinder.php'),
-        ]);
-
 
         Event::listen('backend.form.extendFields', function($form)
         {

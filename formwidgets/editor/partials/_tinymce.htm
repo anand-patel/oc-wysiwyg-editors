@@ -1,6 +1,11 @@
 <div data-control="wysiwyg">
     <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
 </div>
+<style>
+    #mceu_16 .mce-ico {
+        color: #c03f31!important;
+    }
+</style>
 <script>
     
     function elFinderBrowser (field_name, url, type, win)
@@ -37,11 +42,9 @@
             plugins : [
                 "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                "save table contextmenu directionality emoticons template paste textcolor"
+                "save table contextmenu directionality emoticons template paste textcolor ocmediamanager"
             ],
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | preview",
-            file_browser_callback : elFinderBrowser
-            
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media| preview | ocmediamanager"
         });
     }
     
