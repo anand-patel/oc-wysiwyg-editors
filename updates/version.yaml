@@ -19,5 +19,6 @@
 1.1.7: Added Czech language.
 1.1.8: Added Russian language.
 1.1.9: Fix hook and other issues(thanks to Vojta Svoboda)
-1.2.0 remove el-finder(Which fix issue of composer), added OC media manager support for image in TinyMCE & CkEditor, TinyMCE version updated, Fix Image upload for froala editor
+1.2.0: Put settings inside CMS sidemenu(thanks to Amanda Tresbach)
+1.2.1: remove el-finder(Which fix issue of composer), added OC media manager support for image in TinyMCE & CkEditor, TinyMCE version updated, Fix Image upload for froala editor
 
