@@ -1,4 +1,4 @@
-#### Select your favorite Wysiwyg Editor and start editing content
+### Select your favorite Wysiwyg Editor and start editing content
 Wysiwyg Editors is Form Widget plugin that can be used in Backend for editing content.
 
 
@@ -20,7 +20,6 @@ The plugin can be use as content editor in CMS, Blogs, Pages, etc.
 
 ####Future 
 * Add more Editors on request.
-* Add Responsive Filemanager.
 
 ####Like this plugin?
 If you like this plugin, give this plugin a Like or Make donation with PayPal.
@@ -29,13 +28,13 @@ If you like this plugin, give this plugin a Like or Make donation with PayPal.
 ####Credits 
 Wysiwyg editors by
 * [TinyMCE](http://www.tinymce.com/)
-* [CkEditor](http://ckeditor.com/)
+* [CKEditor](http://ckeditor.com/)
 * [Froala](http://editor.froala.com/) (It is free only for non-commercial use, you have to [purchase](http://editor.froala.com/pricing) a license for commercial use.)
 * [elFinder](http://elfinder.org/) & [barryvdh](https://github.com/barryvdh/laravel-elfinder)
 
 
 ###Documentation
-###Installation
+####Installation
 To install this plugin you have to click on __add to project__ or type __AnandPatel.WysiwygEditors__ in Backend *System > Updates > Install Plugin*
 
 ####Configuration
