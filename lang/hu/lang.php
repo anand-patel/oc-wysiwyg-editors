@@ -2,12 +2,12 @@
 
 return [
     'plugin' => [
-        'name' => 'Szövegszerkesztők',
+        'name' => 'Szövegszerkesztő',
         'description' => 'A tartalmak formázása szövegszerkesztő használatával.'
     ],
     'settings' => [
         'label' => 'Szövegszerkesztő',
-        'description' => 'Testreszabása és egyéb beállítások.'
+        'description' => 'Beállítások a weboldal tartalmának szerkesztéséhez.'
     ],
     'widget' => [
         'label' => 'Szerkesztő',
@@ -21,48 +21,48 @@ return [
             'editor_height' => 'Magasság'
         ],
         'page' => [
-            'label' => 'Használva legyen itt: Testreszabás - Lapok',
-            'comment' => 'Szövegszerkesztő megjelenítése a tartalomnál.'
+            'label' => 'Az alábbi oldalon: Lapok',
+            'comment' => 'A Testreszabás menüpontban.'
         ],
         'content' => [
-            'label' => 'Használva legyen itt:  Testreszabás - Tartalom',
-            'comment' => 'Szövegszerkesztő megjelenítése a tartalomnál.'
+            'label' => 'Az alábbi oldalon: Tartalom',
+            'comment' => 'A Testreszabás menüpontban.'
         ],
         'partial' => [
-            'label' => 'Használva legyen itt: Testreszabás - Részlapok',
-            'comment' => 'Szövegszerkesztő megjelenítése a tartalomnál.'
+            'label' => 'Az alábbi oldalon: Részlapok',
+            'comment' => 'A Testreszabás menüpontban.'
         ],
         'layout' => [
-            'label' => 'Használva legyen itt: Testreszabás - Elrendezések',
-            'comment' => 'Szövegszerkesztő megjelenítése a tartalomnál.'
+            'label' => 'Az alábbi oldalon: Elrendezések',
+            'comment' => 'A Testreszabás menüpontban.'
         ],
         'others' => [
-            'label' => 'Használva legyen egyéb helyeken is?',
-            'comment' => 'Mindenhol, kivéve a fentebb beállított helyeket.'
+            'label' => 'Megjelenjen egyéb helyeken is?',
+            'comment' => 'A listában nem szereplő oldalakon.'
         ],
         'problog' => [
-            'label' => 'Használva legyen itt: Radiantweb - Problog',
-            'comment' => 'Szövegszerkesztő megjelenítése a bejegyzésnél.'
+            'label' => 'Az alábbi oldalon: Problog',
+            'comment' => 'A Radiantweb bővítményében.'
         ],
         'proevent' => [
-            'label' => 'Használva legyen itt: Radiantweb - ProEvents',
-            'comment' => 'Szövegszerkesztő megjelenítése a leírásnál.'
+            'label' => 'Az alábbi oldalon: ProEvents',
+            'comment' => 'A Radiantweb bővítményében.'
         ],
         'spages' => [
-            'label' => 'Használva legyen itt: RainLab - Static Pages',
-            'comment' => 'Szövegszerkesztő megjelenítése a tartalomnál.'
+            'label' => 'Az alábbi oldalon: Static Pages',
+            'comment' => 'A RainLab bővítményében.'
         ],
         'blog' => [
-            'label' => 'Használva legyen itt: RainLab - Blog',
-            'comment' => 'Szövegszerkesztő megjelenítése a bejegyzésnél.'
+            'label' => 'Az alábbi oldalon: Blog',
+            'comment' => 'A RainLab bővítményében.'
         ],
         'apages' => [
-            'label' => 'Használva legyen itt: Autumn - Pages',
-            'comment' => 'Szövegszerkesztő megjelenítése a tartalomnál.'
+            'label' => 'Az alábbi oldalon: Pages',
+            'comment' => 'Az Autumn bővítményében.'
         ],
         'tab' => [
             'settings' => 'Beállítások',
-            'content' => 'Tartalom'
+            'content' => 'Megjelenés'
         ]
     ]
 ];
