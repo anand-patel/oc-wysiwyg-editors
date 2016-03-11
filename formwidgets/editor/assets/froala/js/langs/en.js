@@ -5,7 +5,7 @@
  */
 
 /**
- * English spoken in Great Britain
+ * English
  */
 
 $.Editable.LANGS['en'] = {
