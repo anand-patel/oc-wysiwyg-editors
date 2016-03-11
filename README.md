@@ -27,10 +27,9 @@ If you like this plugin, give this plugin a Like or Make donation with PayPal.
 
 ####Credits 
 Wysiwyg editors by
-* [TinyMCE](http://www.tinymce.com/)
-* [CKEditor](http://ckeditor.com/)
-* [Froala](http://editor.froala.com/) (It is free only for non-commercial use, you have to [purchase](http://editor.froala.com/pricing) a license for commercial use.)
-* [elFinder](http://elfinder.org/) & [barryvdh](https://github.com/barryvdh/laravel-elfinder)
+* [TinyMCE](https://www.tinymce.com)
+* [CKEditor](http://ckeditor.com)
+* [Froala](https://www.froala.com/wysiwyg-editor) (It is free only for non-commercial use, you have to [purchase](https://www.froala.com/wysiwyg-editor/pricing) a license for commercial use.)
 
 
 ###Documentation
