@@ -12,7 +12,7 @@ Wysiwyg Editors is Form Widget plugin that can be used in Backend for editing co
 * Automatic Injection to CMS Pages, Layout, Partials and Content.
 * Automatic Injection to Blog, Static Pages, ProBlog and ProEvents plugin.
 * One can configure Editors as per their requirement from settings.
-* elFinder integrated with CKEditor and TinyMCE for easy file browsing and uploading.
+* OC media manager integrated with CKEditor and TinyMCE for easy file browsing and uploading.
 * Froala Editor with image upload (on own server) and delete functionality.
 
 ####Usage
