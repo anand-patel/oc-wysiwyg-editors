@@ -7,8 +7,7 @@ use Backend\Facades\BackendAuth;
  */
 Route::filter('authenticate', function()
 {
-    if (!BackendAuth::check())
-    {
+    if (!BackendAuth::check()) {
         return "You don`t have permission to access this page!!!";
     }
 });
@@ -16,7 +15,7 @@ Route::filter('authenticate', function()
 /**
  * Routes for CKEditor, TinyMCE and Froala
  */
-Route::group(array('before' => 'authenticate'), function()
+Route::group(['before' => 'authenticate'], function()
 {
     /**
      * elFinder routes
@@ -28,10 +27,9 @@ Route::group(array('before' => 'authenticate'), function()
     /**
      * Froala Image upload
      */
-    Route::post('image_upload', function()
-    {
+    Route::post('image_upload', function() {
         // Allowed extentions.
-        $allowedExts = array('gif', 'jpeg', 'jpg', 'png');
+        $allowedExts = ['gif', 'jpeg', 'jpg', 'png'];
 
         // Get filename.
         $temp = explode('.', $_FILES['file']['name']);
@@ -74,8 +72,7 @@ Route::group(array('before' => 'authenticate'), function()
         $src = basename($_POST['src']);
 
         // Check if file exists.
-        if (file_exists(getcwd().'/storage/app/media/'.$src))
-        {
+        if (file_exists(getcwd().'/storage/app/media/'.$src)) {
             // Delete file.
             unlink(getcwd().'/storage/app/media/'.$src);
         }

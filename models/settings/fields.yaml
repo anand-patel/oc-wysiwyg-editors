@@ -1,67 +1,71 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
 tabs:
-  fields:
+    fields:
 
-    editor:
-      label: anandpatel.wysiwygeditors::lang.form.settings.select_editor
-      type: dropdown
-      default: tinymce
-      options:
-         tinymce: TinyMCE
-         ckeditor: CKEditor
-         richeditor: October`s Rich Editor
-         froala: Froala
-      tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+        editor:
+            label: anandpatel.wysiwygeditors::lang.form.settings.select_editor
+            type: dropdown
+            default: tinymce
+            options:
+                tinymce: TinyMCE
+                ckeditor: CKEditor
+                richeditor: October`s Rich Editor
+                froala: Froala
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
-    editor_width:
-       label: anandpatel.wysiwygeditors::lang.form.settings.editor_width
-       placeholder: 100%
-       type: text
-       span: left
-       tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+        editor_width:
+            label: anandpatel.wysiwygeditors::lang.form.settings.editor_width
+            placeholder: 100%
+            type: text
+            span: left
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
-    editor_height:
-       label: anandpatel.wysiwygeditors::lang.form.settings.editor_height
-       placeholder: 500px
-       type: text
-       span: right
-       tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+        editor_height:
+            label: anandpatel.wysiwygeditors::lang.form.settings.editor_height
+            placeholder: 500px
+            type: text
+            span: right
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
-    cms_page_as_wysiwyg:
-        label: anandpatel.wysiwygeditors::lang.form.page.label
-        type: switch
-        span: left
-        default: false
-        comment: anandpatel.wysiwygeditors::lang.form.page.comment
-        tab: anandpatel.wysiwygeditors::lang.form.tab.content
+        cms_page_as_wysiwyg:
+            label: anandpatel.wysiwygeditors::lang.form.page.label
+            type: switch
+            span: left
+            default: false
+            comment: anandpatel.wysiwygeditors::lang.form.page.comment
+            tab: anandpatel.wysiwygeditors::lang.form.tab.content
 
-    cms_content_as_wysiwyg:
-      label: anandpatel.wysiwygeditors::lang.form.content.label
-      type: switch
-      span: right
-      default: false
-      comment: anandpatel.wysiwygeditors::lang.form.content.comment
-      tab: anandpatel.wysiwygeditors::lang.form.tab.content
+        cms_content_as_wysiwyg:
+            label: anandpatel.wysiwygeditors::lang.form.content.label
+            type: switch
+            span: right
+            default: false
+            comment: anandpatel.wysiwygeditors::lang.form.content.comment
+            tab: anandpatel.wysiwygeditors::lang.form.tab.content
 
-    cms_partial_as_wysiwyg:
-        label: anandpatel.wysiwygeditors::lang.form.partial.label
-        type: switch
-        span: left
-        default: false
-        comment: anandpatel.wysiwygeditors::lang.form.partial.comment
-        tab: anandpatel.wysiwygeditors::lang.form.tab.content
+        cms_partial_as_wysiwyg:
+            label: anandpatel.wysiwygeditors::lang.form.partial.label
+            type: switch
+            span: left
+            default: false
+            comment: anandpatel.wysiwygeditors::lang.form.partial.comment
+            tab: anandpatel.wysiwygeditors::lang.form.tab.content
 
-    cms_layout_as_wysiwyg:
-        label: anandpatel.wysiwygeditors::lang.form.layout.label
-        type: switch
-        span: right
-        default: false
-        comment: anandpatel.wysiwygeditors::lang.form.layout.comment
-        tab: anandpatel.wysiwygeditors::lang.form.tab.content
+        cms_layout_as_wysiwyg:
+            label: anandpatel.wysiwygeditors::lang.form.layout.label
+            type: switch
+            span: right
+            default: false
+            comment: anandpatel.wysiwygeditors::lang.form.layout.comment
+            tab: anandpatel.wysiwygeditors::lang.form.tab.content
 
-    others_as_wysiwyg:
-        label: anandpatel.wysiwygeditors::lang.form.others.label
-        type: switch
-        span: left
-        default: false
-        comment: anandpatel.wysiwygeditors::lang.form.others.comment
-        tab: anandpatel.wysiwygeditors::lang.form.tab.content
+        others_as_wysiwyg:
+            label: anandpatel.wysiwygeditors::lang.form.others.label
+            type: switch
+            span: left
+            default: false
+            comment: anandpatel.wysiwygeditors::lang.form.others.comment
+            tab: anandpatel.wysiwygeditors::lang.form.tab.content

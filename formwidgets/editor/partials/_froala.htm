@@ -1,45 +1,43 @@
-
 <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
-
 <script>
-    
-    function froalaInit()
-    {
+    function froalaInit() {
         $("#<?php echo $this->getId('textarea') ?>").editable({
             inlineMode: false,
+            language: '<?php echo $lang; ?>',
             width:    '<?php echo $width; ?>',
             height:   '<?php echo $height; ?>',
-            imageUploadURL: '<?php echo URL::to('image_upload'); ?>',
+            imageUploadURL:    '<?php echo URL::to('image_upload'); ?>',
             imageUploadParams: {id: "my_editor"},
-            imageDeleteURL: '<?php echo URL::to('delete_image'); ?>',
-
+            imageDeleteURL:    '<?php echo URL::to('delete_image'); ?>'
         })
-            // Catch image removal from the editor.
-                .on('editable.afterRemoveImage', function (e, editor, $img) {
-                    // Set the image source to the image delete params.
-                    editor.options.imageDeleteParams = {src: $img.attr('src')};
+        // Catch image removal from the editor.
+        .on('editable.afterRemoveImage', function(e, editor, $img) {
+            // Set the image source to the image delete params.
+            editor.options.imageDeleteParams = {src: $img.attr('src')};
 
-                    // Make the delete request.
-                    editor.deleteImage($img);
-                });
+            // Make the delete request.
+            editor.deleteImage($img);
+        });
     }
     
     $(function() {
         if (typeof $("#<?php echo $this->getId('textarea') ?>").editable === 'undefined') {
-            $('head').append('<link rel="stylesheet" href="<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/css/font-awesome.min.css'); ?>" type="text/css" />');
-            $('head').append('<link rel="stylesheet" href="<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/css/froala_editor.min.css'); ?>" type="text/css" />');
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/froala_editor.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/video.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/block_styles.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/colors.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/char_counter.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/font_family.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/font_size.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/lists.min.js'); ?>', function () {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/tables.min.js'); ?>', function () {
+            $('head').append('<link rel="stylesheet" href="<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/css/font-awesome.min.css'); ?>" type="text/css">');
+            $('head').append('<link rel="stylesheet" href="<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/css/froala_editor.min.css'); ?>" type="text/css">');
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/froala_editor.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/video.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/block_styles.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/colors.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/char_counter.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/font_family.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/font_size.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/lists.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/plugins/tables.min.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/froala/js/langs/'.$lang.'.js'); ?>', function() {
                 froalaInit();
-            }); }); }); }); }); }); }); }); });
-        } else {
+            }); }); }); }); }); }); }); }); }); });
+        }
+        else {
             froalaInit();
         }
     });
