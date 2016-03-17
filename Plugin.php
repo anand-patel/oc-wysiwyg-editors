@@ -1,14 +1,14 @@
 <?php namespace AnandPatel\WysiwygEditors;
 
 use System\Classes\PluginBase;
+use System\Classes\PluginManager;
+use System\Classes\SettingsManager;
+use Cms\Classes\Theme;
 use App;
 use Backend;
-use Illuminate\Foundation\AliasLoader;
 use Event;
+use Illuminate\Foundation\AliasLoader;
 use AnandPatel\WysiwygEditors\Models\Settings;
-use System\Classes\PluginManager;
-use Cms\Classes\Theme;
-use System\Classes\SettingsManager;
 
 /**
  * Wysiwyg Editors Plugin Information File.
@@ -26,6 +26,7 @@ class Plugin extends PluginBase
             'name'        => 'anandpatel.wysiwygeditors::lang.plugin.name',
             'description' => 'anandpatel.wysiwygeditors::lang.plugin.description',
             'author'      => 'Anand Patel',
+            'icon'        => 'icon-pencil-square',
             'homepage'    => 'https://github.com/anand-patel/oc-wysiwyg-editors'
         ];
     }
@@ -55,7 +56,8 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        Event::listen('backend.form.extendFields', function($form) {
+        Event::listen('backend.form.extendFields', function($form)
+        {
             /*
              * Check for the installed plugin if install then extends fields for that.
              */
