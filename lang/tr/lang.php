@@ -12,13 +12,17 @@ return [
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Metin Editörleri',
-        'description' => 'Kullanıcının seçtiği bir metin editörü oluşturur',
+        'description' => 'Kullanıcının seçtiği bir metin editörü oluşturur'
     ],
     'form' => [
         'settings' => [
             'select_editor' => 'Editör seç',
             'editor_width' => 'Editör Genişliği',
-            'editor_height' => 'Editör Yüksekliği'
+            'editor_height' => 'Editör Yüksekliği',
+            'toolbar_label' => 'Araç Çubuğu özelleştirme',
+            'toolbar_tinymce' => 'Belgeleme: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => 'Belgeleme: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => 'Belgeleme: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
         'page' => [
             'label' => 'Sayfa için kullanım',

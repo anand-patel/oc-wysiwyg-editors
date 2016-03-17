@@ -27,9 +27,16 @@ class Editor extends FormWidgetBase
     {
         $this->vars['name'] = $this->formField->getName();
         $this->vars['value'] = $this->model->{$this->fieldName};
+
         $this->vars['width'] = (empty(Settings::instance()->editor_width)) ? '100%' : Settings::instance()->editor_width;
         $this->vars['height'] = (empty(Settings::instance()->editor_height)) ? '500px' : Settings::instance()->editor_height;
         $this->vars['lang'] = App::getLocale();
+
+        $this->vars['toolbar_tinymce'] = (empty(Settings::instance()->toolbar_tinymce)) ? 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | ocmediamanager' : Settings::instance()->toolbar_tinymce;
+
+        $this->vars['toolbar_ckeditor'] = (empty(Settings::instance()->toolbar_ckeditor)) ? "['Undo', 'Redo'], ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'], ['Format', 'FontSize'], ['Maximize', 'ShowBlocks', 'SelectAll', 'RemoveFormat'], ['Source'], '/', ['Bold', 'Italic', 'Underline', 'Strike'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'], ['NumberedList', 'BulletedList', 'Outdent', 'Indent'], ['TextColor', 'BGColor'], ['Link', 'Unlink', 'Anchor'], ['Image', 'Table', 'oembed', 'SpecialChar']" : Settings::instance()->toolbar_ckeditor;
+
+        $this->vars['toolbar_froala'] = (empty(Settings::instance()->toolbar_froala)) ? "'bold', 'italic', 'underline', 'strikeThrough', '|', 'fontSize', 'paragraphFormat', '|', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'undo', 'redo', 'html'" : Settings::instance()->toolbar_froala;
     }
 
     public function loadAssets()

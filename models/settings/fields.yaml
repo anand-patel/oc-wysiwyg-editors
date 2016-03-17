@@ -14,26 +14,66 @@ tabs:
                 ckeditor: CKEditor
                 richeditor: October`s Rich Editor
                 froala: Froala
+            span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         editor_width:
             label: anandpatel.wysiwygeditors::lang.form.settings.editor_width
             placeholder: 100%
             type: text
-            span: left
+            span: auto
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         editor_height:
             label: anandpatel.wysiwygeditors::lang.form.settings.editor_height
             placeholder: 500px
             type: text
-            span: right
+            span: auto
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+
+        toolbar_tinymce:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_tinymce
+            default: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | ocmediamanager"
+            type: textarea
+            size: small
+            trigger:
+                action: show
+                field: editor
+                condition: value[tinymce]
+            span: full
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+
+        toolbar_ckeditor:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_ckeditor
+            default: "['Undo', 'Redo'], ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'], ['Format', 'FontSize'], ['Maximize', 'ShowBlocks', 'SelectAll', 'RemoveFormat'], ['Source'], '/', ['Bold', 'Italic', 'Underline', 'Strike'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'], ['NumberedList', 'BulletedList', 'Outdent', 'Indent'], ['TextColor', 'BGColor'], ['Link', 'Unlink', 'Anchor'], ['Image', 'Table', 'oembed', 'SpecialChar']"
+            type: textarea
+            size: small
+            trigger:
+                action: show
+                field: editor
+                condition: value[ckeditor]
+            span: full
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+
+        toolbar_froala:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala
+            default: "'bold', 'italic', 'underline', 'strikeThrough', '|', 'fontSize', 'paragraphFormat', '|', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'undo', 'redo', 'html'"
+            type: textarea
+            size: small
+            trigger:
+                action: show
+                field: editor
+                condition: value[froala]
+            span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         cms_page_as_wysiwyg:
             label: anandpatel.wysiwygeditors::lang.form.page.label
             type: switch
-            span: left
+            span: auto
             default: false
             comment: anandpatel.wysiwygeditors::lang.form.page.comment
             tab: anandpatel.wysiwygeditors::lang.form.tab.content
@@ -41,7 +81,7 @@ tabs:
         cms_content_as_wysiwyg:
             label: anandpatel.wysiwygeditors::lang.form.content.label
             type: switch
-            span: right
+            span: auto
             default: false
             comment: anandpatel.wysiwygeditors::lang.form.content.comment
             tab: anandpatel.wysiwygeditors::lang.form.tab.content
@@ -49,7 +89,7 @@ tabs:
         cms_partial_as_wysiwyg:
             label: anandpatel.wysiwygeditors::lang.form.partial.label
             type: switch
-            span: left
+            span: auto
             default: false
             comment: anandpatel.wysiwygeditors::lang.form.partial.comment
             tab: anandpatel.wysiwygeditors::lang.form.tab.content
@@ -57,7 +97,7 @@ tabs:
         cms_layout_as_wysiwyg:
             label: anandpatel.wysiwygeditors::lang.form.layout.label
             type: switch
-            span: right
+            span: auto
             default: false
             comment: anandpatel.wysiwygeditors::lang.form.layout.comment
             tab: anandpatel.wysiwygeditors::lang.form.tab.content
@@ -65,7 +105,7 @@ tabs:
         others_as_wysiwyg:
             label: anandpatel.wysiwygeditors::lang.form.others.label
             type: switch
-            span: left
+            span: auto
             default: false
             comment: anandpatel.wysiwygeditors::lang.form.others.comment
             tab: anandpatel.wysiwygeditors::lang.form.tab.content

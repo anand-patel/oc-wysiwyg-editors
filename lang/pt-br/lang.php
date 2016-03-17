@@ -12,13 +12,17 @@ return [
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Editores Wysiwyg',
-        'description' => 'Renderiza um editor wysiwyg à escolha do utilizador',
+        'description' => 'Renderiza um editor wysiwyg à escolha do utilizador'
     ],
     'form' => [
         'settings' => [
             'select_editor' => 'Escolha o editor',
             'editor_width' => 'Largura do editor',
-            'editor_height' => 'Altura do editor'
+            'editor_height' => 'Altura do editor',
+            'toolbar_label' => 'Personalização da barra de ferramentas',
+            'toolbar_tinymce' => 'Documentação: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => 'Documentação: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => 'Documentação: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
         'page' => [
             'label' => 'Utilizar em Páginas?',

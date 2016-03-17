@@ -12,13 +12,17 @@ return [
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Wysiwyg Editors',
-        'description' => '渲染一个用户选择的所见即所得编辑器',
+        'description' => '渲染一个用户选择的所见即所得编辑器'
     ],
     'form' => [
         'settings' => [
             'select_editor' => '选择编辑器',
             'editor_width' => '编辑器宽度',
-            'editor_height' => '编辑器高度'
+            'editor_height' => '编辑器高度',
+            'toolbar_label' => '定制工具栏',
+            'toolbar_tinymce' => '文件: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => '文件: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => '文件: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
         'page' => [
             'label' => '在CMS - 页面中使用?',

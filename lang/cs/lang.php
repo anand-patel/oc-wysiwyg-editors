@@ -12,13 +12,17 @@ return [
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Wysiwyg editory',
-        'description' => 'Vykreslí Wysiwyg editor dle vašeho výběru',
+        'description' => 'Vykreslí Wysiwyg editor dle vašeho výběru'
     ],
     'form' => [
         'settings' => [
             'select_editor' => 'Použitý typ editoru',
             'editor_width' => 'Šířka editoru',
-            'editor_height' => 'Výška editoru'
+            'editor_height' => 'Výška editoru',
+            'toolbar_label' => 'Toolbar customization',
+            'toolbar_tinymce' => 'Dokumentace: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => 'Dokumentace: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => 'Dokumentace: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
 	    'page' => [
             'label' => 'Použít editor pro stránky?',

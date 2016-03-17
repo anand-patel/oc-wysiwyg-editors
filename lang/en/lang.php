@@ -3,7 +3,7 @@
 return [
     'plugin' => [
         'name' => 'Wysiwyg Editors',
-        'description' => 'Inject your Favorite Wysiwyg Editor to CMS and other Code Editor'
+        'description' => 'Inject your favorite Wysiwyg Editor to CMS and other Code Editor'
     ],
     'settings' => [
         'label' => 'Wysiwyg Editors',
@@ -12,13 +12,17 @@ return [
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Wysiwyg Editors',
-        'description' => 'Renders a wysiwyg editor of user`s choice',
+        'description' => 'Renders a wysiwyg editor of user`s choice'
     ],
     'form' => [
         'settings' => [
             'select_editor' => 'Select editor',
             'editor_width' => 'Editor width',
-            'editor_height' => 'Editor height'
+            'editor_height' => 'Editor height',
+            'toolbar_label' => 'Toolbar customization',
+            'toolbar_tinymce' => 'Documentation: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => 'Documentation: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => 'Documentation: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
         'page' => [
             'label' => 'Use for CMS - Page?',
