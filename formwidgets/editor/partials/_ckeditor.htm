@@ -7,7 +7,8 @@
             var editor = $('[data-control="wysiwyg"] textarea').ckeditor({
                 language: '<?php echo $lang; ?>',
                 width:    '<?php echo $width; ?>',
-                height:   '<?php echo $height; ?>'
+                height:   '<?php echo $height; ?>',
+                toolbar:  [<?php echo $toolbar_ckeditor; ?>]
             });
         }
         

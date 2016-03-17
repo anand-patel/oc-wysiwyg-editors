@@ -18,7 +18,11 @@ return [
         'settings' => [
             'select_editor' => 'Szerkesztő',
             'editor_width' => 'Szélesség',
-            'editor_height' => 'Magasság'
+            'editor_height' => 'Magasság',
+            'toolbar_label' => 'Eszköztár',
+            'toolbar_tinymce' => 'Dokumentáció: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => 'Dokumentáció: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => 'Dokumentáció: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
         'page' => [
             'label' => 'Az alábbi oldalon: Lapok',

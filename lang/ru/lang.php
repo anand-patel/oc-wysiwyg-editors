@@ -12,13 +12,17 @@ return [
     'widget' => [
         'label' => 'Wysiwyg',
         'name' => 'Визуальный редактор',
-        'description' => 'Отображает выбранный пользователем визуальный редактор',
+        'description' => 'Отображает выбранный пользователем визуальный редактор'
     ],
     'form' => [
         'settings' => [
             'select_editor' => 'Выберите редактор',
             'editor_width' => 'Ширина окна редактора',
-            'editor_height' => 'Высота окна редактора'
+            'editor_height' => 'Высота окна редактора',
+            'toolbar_label' => 'Панель инструментов настройки',
+            'toolbar_tinymce' => 'документация: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
+            'toolbar_ckeditor' => 'документация: http://docs.ckeditor.com/#!/guide/dev_toolbar',
+            'toolbar_froala' => 'документация: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
         ],
         'page' => [
             'label' => 'Использовать для страниц в CMS?',

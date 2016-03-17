@@ -6,6 +6,8 @@
             language: '<?php echo $lang; ?>',
             width:    '<?php echo $width; ?>',
             height:   '<?php echo $height; ?>',
+            toolbarButtonsSM:  [<?php echo $toolbar_froala; ?>],
+            toolbarButtonsXS:  ['bold', 'italic', 'fontSize', 'align', 'formatOL', 'formatUL', 'insertLink', 'insertImage', 'undo'],
             imageUploadURL:    '<?php echo URL::to('image_upload'); ?>',
             imageUploadParams: {id: "my_editor"},
             imageDeleteURL:    '<?php echo URL::to('delete_image'); ?>'
