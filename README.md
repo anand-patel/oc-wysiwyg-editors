@@ -47,4 +47,4 @@ To configure this Plugin goto Backend *System* then find *My Settings* in left s
 3. Can we use this plugin in front end?
 > No, this plugin is for backend only because we can`t use Form Widgets in Frontend.
 5. Where images / files are uploaded?
-> You can find uploaded images / files in __storage/app__ direcotry.
+> You can find uploaded images / files in __storage/app/media__ direcotry.
