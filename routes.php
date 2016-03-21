@@ -13,19 +13,12 @@ Route::filter('authenticate', function()
 });
 
 /**
- * Routes for CKEditor, TinyMCE and Froala
+ * Routes for Froala
  */
 Route::group(['before' => 'authenticate'], function()
 {
     /**
-     * elFinder routes
-     */
-    Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
-    Route::get('elfinder/ckeditor4', 'Barryvdh\Elfinder\ElfinderController@showCKeditor4');
-    Route::get('elfinder/tinymce4', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
-
-    /**
-     * Froala Image upload
+     * Froala image upload
      */
     Route::post('image_upload', function() {
         // Allowed extentions.
@@ -64,7 +57,7 @@ Route::group(['before' => 'authenticate'], function()
     });
 
     /**
-     * Froala Image Delete
+     * Froala image delete
      */
     Route::post('delete_image', function()
     {

@@ -20,9 +20,16 @@ return [
             'editor_width' => 'Editor width',
             'editor_height' => 'Editor height',
             'toolbar_label' => 'Toolbar customization',
+            'toolbar_label_lg' => 'Toolbar customization (large)',
+            'toolbar_label_md' => 'Toolbar customization (medium)',
+            'toolbar_label_sm' => 'Toolbar customization (small)',
+            'toolbar_label_xs' => 'Toolbar customization (modile)',
             'toolbar_tinymce' => 'Documentation: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => 'Documentation: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => 'Documentation: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => 'Documentation: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => 'Documentation: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => 'Documentation: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => 'Documentation: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
         'page' => [
             'label' => 'Use for CMS - Page?',

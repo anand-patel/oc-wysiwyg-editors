@@ -20,9 +20,16 @@ return [
             'editor_width' => 'Editör Genişliği',
             'editor_height' => 'Editör Yüksekliği',
             'toolbar_label' => 'Araç Çubuğu özelleştirme',
+            'toolbar_label_lg' => 'Araç Çubuğu özelleştirme (büyük)',
+            'toolbar_label_md' => 'Araç Çubuğu özelleştirme (orta)',
+            'toolbar_label_sm' => 'Araç Çubuğu özelleştirme (küçük)',
+            'toolbar_label_xs' => 'Araç Çubuğu özelleştirme (hareketli)',
             'toolbar_tinymce' => 'Belgeleme: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => 'Belgeleme: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => 'Belgeleme: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => 'Belgeleme: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => 'Belgeleme: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => 'Belgeleme: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => 'Belgeleme: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
         'page' => [
             'label' => 'Sayfa için kullanım',

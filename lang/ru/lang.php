@@ -20,9 +20,16 @@ return [
             'editor_width' => 'Ширина окна редактора',
             'editor_height' => 'Высота окна редактора',
             'toolbar_label' => 'Панель инструментов настройки',
+            'toolbar_label_lg' => 'Панель инструментов настройки (большой)',
+            'toolbar_label_md' => 'Панель инструментов настройки (средний)',
+            'toolbar_label_sm' => 'Панель инструментов настройки (маленький)',
+            'toolbar_label_xs' => 'Панель инструментов настройки (мобильный)',
             'toolbar_tinymce' => 'документация: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => 'документация: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => 'документация: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => 'документация: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => 'документация: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => 'документация: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => 'документация: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
         'page' => [
             'label' => 'Использовать для страниц в CMS?',

@@ -4,9 +4,9 @@ Wysiwyg Editors is Form Widget plugin that can be used in Backend for editing co
 
 ####List of Wysiwyg editors included in Plugin
 1. TinyMCE
-2. CkEditor 
-3. October`s Rich editor
-4. Froala
+2. CKEditor
+3. Froala
+4. Redactor (October`s build-in editor)
 
 ####Features
 * Automatic Injection to CMS Pages, Layout, Partials and Content.
