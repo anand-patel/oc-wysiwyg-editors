@@ -60,7 +60,7 @@ tabs:
         toolbar_froala_lg:
             label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_lg
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_lg
-            default: "'undo', 'redo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', 'strikeThrough', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'fullscreen'"
+            default: "'undo', 'redo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', 'strikeThrough', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'fullscreen'"
             type: textarea
             size: small
             trigger:
@@ -73,7 +73,7 @@ tabs:
         toolbar_froala_md:
             label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_md
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_md
-            default: "'undo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'fullscreen'"
+            default: "'undo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'fullscreen'"
             type: textarea
             size: small
             trigger:
@@ -86,7 +86,7 @@ tabs:
         toolbar_froala_sm:
             label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_sm
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_sm
-            default: "'undo', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertFile', 'insertTable', '|', 'fullscreen'"
+            default: "'undo', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertTable', '|', 'fullscreen'"
             type: textarea
             size: small
             trigger:
