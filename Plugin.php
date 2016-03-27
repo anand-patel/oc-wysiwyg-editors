@@ -10,16 +10,8 @@ use Event;
 use Illuminate\Foundation\AliasLoader;
 use AnandPatel\WysiwygEditors\Models\Settings;
 
-/**
- * Wysiwyg Editors Plugin Information File.
- */
 class Plugin extends PluginBase
 {
-    /**
-     * Returns information about this plugin.
-     *
-     * @return array
-     */
     public function pluginDetails()
     {
         return [

@@ -12,8 +12,8 @@ tabs:
             options:
                 tinymce: TinyMCE
                 ckeditor: CKEditor
-                richeditor: October`s Rich Editor
                 froala: Froala
+                richeditor: Redactor
             span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
@@ -34,7 +34,7 @@ tabs:
         toolbar_tinymce:
             label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_tinymce
-            default: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | ocmediamanager"
+            default: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media ocmediamanager"
             type: textarea
             size: small
             trigger:
@@ -47,7 +47,7 @@ tabs:
         toolbar_ckeditor:
             label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_ckeditor
-            default: "['Undo', 'Redo'], ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'], ['Format', 'FontSize'], ['Maximize', 'ShowBlocks', 'SelectAll', 'RemoveFormat'], ['Source'], '/', ['Bold', 'Italic', 'Underline', 'Strike'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'], ['NumberedList', 'BulletedList', 'Outdent', 'Indent'], ['TextColor', 'BGColor'], ['Link', 'Unlink', 'Anchor'], ['Image', 'Table', 'oembed', 'SpecialChar']"
+            default: "['Undo', 'Redo'], ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'], ['Format', 'FontSize'], ['ShowBlocks', 'SelectAll', 'RemoveFormat'], ['Source'], ['Maximize'], '/', ['Bold', 'Italic', 'Underline', 'Strike'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'], ['BulletedList', 'NumberedList', 'Outdent', 'Indent'], ['TextColor', 'BGColor'], ['Link', 'Unlink', 'Anchor'], ['Image', 'Table', 'oembed', 'SpecialChar', 'OcMediaManager']"
             type: textarea
             size: small
             trigger:
@@ -57,17 +57,56 @@ tabs:
             span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
-        toolbar_froala:
-            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label
-            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala
-            default: "'bold', 'italic', 'underline', 'strikeThrough', '|', 'fontSize', 'paragraphFormat', '|', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'undo', 'redo', 'html'"
+        toolbar_froala_lg:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_lg
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_lg
+            default: "'undo', 'redo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', 'strikeThrough', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'fullscreen'"
             type: textarea
             size: small
             trigger:
                 action: show
                 field: editor
                 condition: value[froala]
-            span: full
+            span: auto
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+
+        toolbar_froala_md:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_md
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_md
+            default: "'undo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'fullscreen'"
+            type: textarea
+            size: small
+            trigger:
+                action: show
+                field: editor
+                condition: value[froala]
+            span: auto
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+
+        toolbar_froala_sm:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_sm
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_sm
+            default: "'undo', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertTable', '|', 'fullscreen'"
+            type: textarea
+            size: small
+            trigger:
+                action: show
+                field: editor
+                condition: value[froala]
+            span: auto
+            tab: anandpatel.wysiwygeditors::lang.form.tab.settings
+
+        toolbar_froala_xs:
+            label: anandpatel.wysiwygeditors::lang.form.settings.toolbar_label_xs
+            comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_xs
+            default: "'undo', 'html', '|', 'bold', 'italic', '|', 'paragraphFormat', 'align', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage'"
+            type: textarea
+            size: small
+            trigger:
+                action: show
+                field: editor
+                condition: value[froala]
+            span: auto
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         cms_page_as_wysiwyg:

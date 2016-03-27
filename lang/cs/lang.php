@@ -20,9 +20,16 @@ return [
             'editor_width' => 'Šířka editoru',
             'editor_height' => 'Výška editoru',
             'toolbar_label' => 'Toolbar customization',
+            'toolbar_label_lg' => 'Toolbar customization (velký)',
+            'toolbar_label_md' => 'Toolbar customization (střední)',
+            'toolbar_label_sm' => 'Toolbar customization (malý)',
+            'toolbar_label_xs' => 'Toolbar customization (mobilní)',
             'toolbar_tinymce' => 'Dokumentace: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => 'Dokumentace: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => 'Dokumentace: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => 'Dokumentace: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => 'Dokumentace: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => 'Dokumentace: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => 'Dokumentace: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
 	    'page' => [
             'label' => 'Použít editor pro stránky?',

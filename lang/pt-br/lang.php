@@ -20,9 +20,16 @@ return [
             'editor_width' => 'Largura do editor',
             'editor_height' => 'Altura do editor',
             'toolbar_label' => 'Personalização da barra de ferramentas',
+            'toolbar_label_lg' => 'Personalização da barra de ferramentas (grande)',
+            'toolbar_label_md' => 'Personalização da barra de ferramentas (médio)',
+            'toolbar_label_sm' => 'Personalização da barra de ferramentas (pequeno)',
+            'toolbar_label_xs' => 'Personalização da barra de ferramentas (móvel)',
             'toolbar_tinymce' => 'Documentação: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => 'Documentação: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => 'Documentação: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => 'Documentação: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => 'Documentação: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => 'Documentação: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => 'Documentação: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
         'page' => [
             'label' => 'Utilizar em Páginas?',

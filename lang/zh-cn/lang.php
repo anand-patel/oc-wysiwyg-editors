@@ -20,9 +20,16 @@ return [
             'editor_width' => '编辑器宽度',
             'editor_height' => '编辑器高度',
             'toolbar_label' => '定制工具栏',
+            'toolbar_label_lg' => '定制工具栏 (大)',
+            'toolbar_label_md' => '定制工具栏 (中)',
+            'toolbar_label_sm' => '定制工具栏 (小)',
+            'toolbar_label_xs' => '定制工具栏 (移动)',
             'toolbar_tinymce' => '文件: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => '文件: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => '文件: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => '文件: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => '文件: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => '文件: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => '文件: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
         'page' => [
             'label' => '在CMS - 页面中使用?',

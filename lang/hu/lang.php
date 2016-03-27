@@ -20,9 +20,16 @@ return [
             'editor_width' => 'Szélesség',
             'editor_height' => 'Magasság',
             'toolbar_label' => 'Eszköztár',
+            'toolbar_label_lg' => 'Eszköztár (nagy)',
+            'toolbar_label_md' => 'Eszköztár (közepes)',
+            'toolbar_label_sm' => 'Eszköztár (kicsi)',
+            'toolbar_label_xs' => 'Eszköztár (mobil)',
             'toolbar_tinymce' => 'Dokumentáció: http://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols',
             'toolbar_ckeditor' => 'Dokumentáció: http://docs.ckeditor.com/#!/guide/dev_toolbar',
-            'toolbar_froala' => 'Dokumentáció: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons'
+            'toolbar_froala_lg' => 'Dokumentáció: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtons',
+            'toolbar_froala_md' => 'Dokumentáció: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsMD',
+            'toolbar_froala_sm' => 'Dokumentáció: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsSM',
+            'toolbar_froala_xs' => 'Dokumentáció: https://www.froala.com/wysiwyg-editor/docs/options#toolbarButtonsXS'
         ],
         'page' => [
             'label' => 'Az alábbi oldalon: Lapok',
