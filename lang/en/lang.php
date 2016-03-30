@@ -51,6 +51,14 @@ return [
             'label' => 'Use for others?',
             'comment' => 'Replace every instance of Code Editor with Wysiwyg Editor in all plugins except CMS (Page, Partial, Layout, Content)'
         ],
+        'spages' => [
+            'label' => 'Use for RainLab Static Pages?',
+            'comment' => 'Use Wysiwyg editor in RainLab Static Pages plugin as page editor'
+        ],
+        'blog' => [
+            'label' => 'Use for RainLab Blog?',
+            'comment' => 'Use Wysiwyg editor in RainLab Blog plugin as post editor'
+        ],
         'problog' => [
             'label' => 'Use for Radiantweb Problog?',
             'comment' => 'Use Wysiwyg editor in Radientweb Problog plugin as post editor'
@@ -59,21 +67,18 @@ return [
             'label' => 'Use for Radiantweb ProEvents?',
             'comment' => 'Use Wysiwyg editor in Radientweb ProEvents plugin as Event details editor'
         ],
-        'spages' => [
-            'label' => 'Use for RainLab Static Pages?',
-            'comment' => 'Use Wysiwyg editor in RainLab Static Pages plugin as page editor'
-        ],
-        'blog' => [
-            'label' => 'Use for RainLab Blog?',
-            'comment' => 'Use Wysiwyg editor in RainLab blog plugin as post editor'
-        ],
         'apages' => [
             'label' => 'Use for Autumn Pages?',
-            'comment' => 'Use Wysiwyg editor in Autumn page plugin as page editor'
+            'comment' => 'Use Wysiwyg editor in Autumn Pages plugin as page editor'
+        ],
+        'cplus' => [
+            'label' => 'Use for Indikator Content Plus?',
+            'comment' => 'Use Wysiwyg editor in Indikator Content Plus plugin as page editor'
         ],
         'tab' => [
             'settings' => 'Settings',
-            'content' => 'Content'
+            'content' => 'Content',
+            'section' => 'Plugins'
         ]
     ]
 ];

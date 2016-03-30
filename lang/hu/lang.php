@@ -51,29 +51,34 @@ return [
             'label' => 'Megjelenjen egyéb helyeken is?',
             'comment' => 'A listában nem szereplő oldalakon.'
         ],
-        'problog' => [
-            'label' => 'Az alábbi oldalon: Problog',
-            'comment' => 'A Radiantweb bővítményében.'
-        ],
-        'proevent' => [
-            'label' => 'Az alábbi oldalon: ProEvents',
-            'comment' => 'A Radiantweb bővítményében.'
-        ],
         'spages' => [
-            'label' => 'Az alábbi oldalon: Static Pages',
+            'label' => 'Az alábbi menüben: Static Pages',
             'comment' => 'A RainLab bővítményében.'
         ],
         'blog' => [
-            'label' => 'Az alábbi oldalon: Blog',
+            'label' => 'Az alábbi menüben: Blog',
             'comment' => 'A RainLab bővítményében.'
         ],
+        'problog' => [
+            'label' => 'Az alábbi menüben: Problog',
+            'comment' => 'A Radiantweb bővítményében.'
+        ],
+        'proevent' => [
+            'label' => 'Az alábbi menüben: ProEvents',
+            'comment' => 'A Radiantweb bővítményében.'
+        ],
         'apages' => [
-            'label' => 'Az alábbi oldalon: Pages',
+            'label' => 'Az alábbi menüben: Pages',
             'comment' => 'Az Autumn bővítményében.'
+        ],
+        'cplus' => [
+            'label' => 'Az alábbi menüben: Tartalom',
+            'comment' => 'Az Indikátor bővítményében.'
         ],
         'tab' => [
             'settings' => 'Beállítások',
-            'content' => 'Megjelenés'
+            'content' => 'Megjelenés',
+            'section' => 'Bővítmények'
         ]
     ]
 ];

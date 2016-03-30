@@ -51,14 +51,6 @@ return [
             'label' => '在其它地方使用?',
             'comment' => '在除开CMS(页面、部件、布局、内容)的其它所有编辑器中使用Wysiwyg'
         ],
-        'problog' => [
-            'label' => '在Radiantweb Problog中使用?',
-            'comment' => '在Radientweb Problog插件中使用Wysiwyg'
-        ],
-        'proevent' => [
-            'label' => '在Radiantweb ProEvents中使用?',
-            'comment' => '在Radientweb ProEvents插件中使用Wysiwyg'
-        ],
         'spages' => [
             'label' => '在RainLab Static Pages中使用?',
             'comment' => '在RainLab Static Pages插件中使用Wysiwyg'
@@ -67,14 +59,26 @@ return [
             'label' => '在RainLab Blog中使用?',
             'comment' => '在RainLab Blog插件中使用Wysiwyg'
         ],
+        'problog' => [
+            'label' => '在Radiantweb Problog中使用?',
+            'comment' => '在Radientweb Problog插件中使用Wysiwyg'
+        ],
+        'proevent' => [
+            'label' => '在Radiantweb ProEvents中使用?',
+            'comment' => '在Radientweb ProEvents插件中使用Wysiwyg'
+        ],
         'apages' => [
             'label' => '在Autumn Pages中使用?',
             'comment' => '在Autumn Pages插件中使用Wysiwyg'
         ],
+        'cplus' => [
+            'label' => '在Indikator Content Plus中使用?',
+            'comment' => '在Indikator Content Plus插件中使用Wysiwyg'
+        ],
         'tab' => [
             'settings' => '设置',
-            'content' => '使用范围'
+            'content' => '使用范围',
+            'section' => '插件'
         ]
     ]
 ];
-

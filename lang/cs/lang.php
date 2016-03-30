@@ -51,14 +51,6 @@ return [
             'label' => 'Použít editor pro vše ostatní?',
             'comment' => 'Nahradí všechny výskyty editoru kódu ve všech pluginech s vyjímkou CMS (Stránky, Obsahové bloky, Prvky stránky a Layouty)'
         ],
-        'problog' => [
-            'label' => 'Použít pro Radiantweb Problog?',
-            'comment' => 'Použije Wysiwyg editor pro Radientweb Problog plugin jako editor článků'
-        ],
-        'proevent' => [
-            'label' => 'Použít pro Radiantweb ProEvents?',
-            'comment' => 'Použije Wysiwyg editor pro Radientweb ProEvents plugin jako editor detailů událostí'
-        ],
         'spages' => [
             'label' => 'Použít pro RainLab Static Pages?',
             'comment' => 'Použije Wysiwyg editor pro RainLab Static Pages plugin jako editor stránek'
@@ -67,13 +59,26 @@ return [
             'label' => 'Použít pro RainLab Blog?',
             'comment' => 'Použije Wysiwyg editor pro RainLab blog plugin jako editor článků'
         ],
+        'problog' => [
+            'label' => 'Použít pro Radiantweb Problog?',
+            'comment' => 'Použije Wysiwyg editor pro Radientweb Problog plugin jako editor článků'
+        ],
+        'proevent' => [
+            'label' => 'Použít pro Radiantweb ProEvents?',
+            'comment' => 'Použije Wysiwyg editor pro Radientweb ProEvents plugin jako editor detailů událostí'
+        ],
         'apages' => [
             'label' => 'Použít pro Autumn Pages?',
-            'comment' => 'použije Wysiwyg editor pro Autumn page plugin jako editor stránek'
+            'comment' => 'použije Wysiwyg editor pro Autumn Pages plugin jako editor stránek'
+        ],
+        'cplus' => [
+            'label' => 'Použít pro Indikator Content Plus?',
+            'comment' => 'použije Wysiwyg editor pro Indikator Content Plus plugin jako editor článků'
         ],
         'tab' => [
             'settings' => 'Nastavení editoru',
-            'content' => 'Použití editoru'
+            'content' => 'Použití editoru',
+            'section' => 'Pluginy'
         ]
     ]
 ];
