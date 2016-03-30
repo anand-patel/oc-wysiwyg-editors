@@ -51,14 +51,6 @@ return [
             'label' => 'Usar em todos os outros casos?',
             'comment' => 'Permite usar o editor em todos os casos excepto em Páginas, Blocos, Layouts, Conteúdos'
         ],
-        'problog' => [
-            'label' => 'Utilizar em Radiantweb Problog?',
-            'comment' => 'Permite usar no plugin Radientweb Problog como editor de artigos'
-        ],
-        'proevent' => [
-            'label' => 'Utilizar em Radiantweb ProEvents?',
-            'comment' => 'Permite user no plugin Radientweb ProEvents como editor de detalhes do evento'
-        ],
         'spages' => [
             'label' => 'Utilizar em RainLab Static Pages?',
             'comment' => 'Permite usar no plugin RainLab Static Pages como editor de páginas'
@@ -67,13 +59,26 @@ return [
             'label' => 'Utilizar em RainLab Blog?',
             'comment' => 'Permite usar no plugin RainLab Blog como editor de artigos'
         ],
+        'problog' => [
+            'label' => 'Utilizar em Radiantweb Problog?',
+            'comment' => 'Permite usar no plugin Radientweb Problog como editor de artigos'
+        ],
+        'proevent' => [
+            'label' => 'Utilizar em Radiantweb ProEvents?',
+            'comment' => 'Permite user no plugin Radientweb ProEvents como editor de detalhes do evento'
+        ],
         'apages' => [
             'label' => 'Utilizar em Autumn Pages?',
-            'comment' => 'Permite usar no plugin Autumn page como editor de páginas'
+            'comment' => 'Permite usar no plugin Autumn Pages como editor de páginas'
+        ],
+        'cplus' => [
+            'label' => 'Utilizar em Indikator Content Plus?',
+            'comment' => 'Permite usar no plugin Indikator Content Plus como editor de páginas'
         ],
         'tab' => [
             'settings' => 'Definições',
-            'content' => 'Permissões'
+            'content' => 'Permissões',
+            'section' => 'Plugins'
         ]
     ]
 ];

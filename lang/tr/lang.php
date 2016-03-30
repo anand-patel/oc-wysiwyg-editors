@@ -51,14 +51,6 @@ return [
             'label' => 'Diğer modüller için kullanım',
             'comment' => '(Sayfa, Parça metinler, Şablonlar, İçerik) dışındaki tüm eklentiler için de seçilen Metin Editörünü kullan'
         ],
-        'problog' => [
-            'label' => 'Radiantweb Problog için kullanım',
-            'comment' => 'Radientweb Problog modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
-        ],
-        'proevent' => [
-            'label' => 'Radiantweb ProEvents için kullanım',
-            'comment' => 'Radiantweb ProEvents modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
-        ],
         'spages' => [
             'label' => 'Sabit sayfalar için kullanım',
             'comment' => 'Sabit sayfalar modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
@@ -67,13 +59,26 @@ return [
             'label' => 'Blog için kullanım',
             'comment' => 'Blog modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
+        'problog' => [
+            'label' => 'Radiantweb Problog için kullanım',
+            'comment' => 'Radientweb Problog modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
+        ],
+        'proevent' => [
+            'label' => 'Radiantweb ProEvents için kullanım',
+            'comment' => 'Radiantweb ProEvents modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
+        ],
         'apages' => [
             'label' => 'Autumn Sayfalar için kullanım',
             'comment' => 'Autumn Sayfalar modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
+        'cplus' => [
+            'label' => 'Indikator Content Plus için kullanım',
+            'comment' => 'Indikator Content Plus modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
+        ],
         'tab' => [
             'settings' => 'Ayarlar',
-            'content' => 'İçerik'
+            'content' => 'İçerik',
+            'section' => 'Eklentiler'
         ]
     ]
 ];

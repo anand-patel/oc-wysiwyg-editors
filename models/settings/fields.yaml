@@ -7,28 +7,28 @@ tabs:
 
         editor:
             label: anandpatel.wysiwygeditors::lang.form.settings.select_editor
-            type: dropdown
+            type: radio
             default: tinymce
             options:
                 tinymce: TinyMCE
                 ckeditor: CKEditor
                 froala: Froala
                 richeditor: Redactor
-            span: full
+            span: left
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         editor_width:
             label: anandpatel.wysiwygeditors::lang.form.settings.editor_width
             placeholder: 100%
             type: text
-            span: auto
+            span: right
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         editor_height:
             label: anandpatel.wysiwygeditors::lang.form.settings.editor_height
             placeholder: 500px
             type: text
-            span: auto
+            span: right
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         toolbar_tinymce:
@@ -36,7 +36,7 @@ tabs:
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_tinymce
             default: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media ocmediamanager"
             type: textarea
-            size: small
+            size: tiny
             trigger:
                 action: show
                 field: editor
@@ -62,12 +62,12 @@ tabs:
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_lg
             default: "'undo', 'redo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', 'strikeThrough', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'fullscreen'"
             type: textarea
-            size: small
+            size: tiny
             trigger:
                 action: show
                 field: editor
                 condition: value[froala]
-            span: auto
+            span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         toolbar_froala_md:
@@ -75,12 +75,12 @@ tabs:
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_md
             default: "'undo', 'clearFormatting', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', '|', 'fullscreen'"
             type: textarea
-            size: small
+            size: tiny
             trigger:
                 action: show
                 field: editor
                 condition: value[froala]
-            span: auto
+            span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         toolbar_froala_sm:
@@ -88,12 +88,12 @@ tabs:
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_sm
             default: "'undo', 'html', '|', 'bold', 'italic', 'underline', '|', 'paragraphFormat', 'align', 'fontSize', 'color', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage', 'insertTable', '|', 'fullscreen'"
             type: textarea
-            size: small
+            size: tiny
             trigger:
                 action: show
                 field: editor
                 condition: value[froala]
-            span: auto
+            span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         toolbar_froala_xs:
@@ -101,12 +101,12 @@ tabs:
             comment: anandpatel.wysiwygeditors::lang.form.settings.toolbar_froala_xs
             default: "'undo', 'html', '|', 'bold', 'italic', '|', 'paragraphFormat', 'align', '|', 'formatUL', 'formatOL', 'outdent', 'indent', '|', 'insertLink', 'insertImage'"
             type: textarea
-            size: small
+            size: tiny
             trigger:
                 action: show
                 field: editor
                 condition: value[froala]
-            span: auto
+            span: full
             tab: anandpatel.wysiwygeditors::lang.form.tab.settings
 
         cms_page_as_wysiwyg:
@@ -147,4 +147,9 @@ tabs:
             span: auto
             default: false
             comment: anandpatel.wysiwygeditors::lang.form.others.comment
+            tab: anandpatel.wysiwygeditors::lang.form.tab.content
+
+        plugins_section:
+            label: anandpatel.wysiwygeditors::lang.form.tab.section
+            type: section
             tab: anandpatel.wysiwygeditors::lang.form.tab.content

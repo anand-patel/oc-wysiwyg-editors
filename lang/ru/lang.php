@@ -51,14 +51,6 @@ return [
             'label' => 'Использовать для остального?',
             'comment' => 'Включить визуальный редактор для всех плагинов кроме разделов CMS (Страницы, Фрагменты, Шаблоны, Содержимое)'
         ],
-        'problog' => [
-            'label' => 'Использовать в Radiantweb Problog?',
-            'comment' => 'Включить визуальный редактор в плагине Radientweb Problog для редактирования записей'
-        ],
-        'proevent' => [
-            'label' => 'Использовать в Radiantweb ProEvents?',
-            'comment' => 'Включить визуальный редактор в плагине Radientweb ProEvents для редактирования описания события'
-        ],
         'spages' => [
             'label' => 'Использовать в RainLab Static Pages?',
             'comment' => 'Включить визуальный редактор в плагине Radientweb Problog для редактирования кода страниц'
@@ -67,13 +59,26 @@ return [
             'label' => 'Использовать в RainLab Blog?',
             'comment' => 'Включить визуальный редактор в плагине RainLab Blog для редактирования записей'
         ],
+        'problog' => [
+            'label' => 'Использовать в Radiantweb Problog?',
+            'comment' => 'Включить визуальный редактор в плагине Radientweb Problog для редактирования записей'
+        ],
+        'proevent' => [
+            'label' => 'Использовать в Radiantweb ProEvents?',
+            'comment' => 'Включить визуальный редактор в плагине Radientweb ProEvents для редактирования описания события'
+        ],
         'apages' => [
             'label' => 'Использовать в Autumn Pages?',
             'comment' => 'Включить визуальный редактор в плагине Autumn Pages для редактирования записей'
         ],
+        'cplus' => [
+            'label' => 'Использовать в Indikator Content Plus?',
+            'comment' => 'Включить визуальный редактор в плагине Indikator Content Plus для редактирования записей'
+        ],
         'tab' => [
             'settings' => 'Настройки',
-            'content' => 'Место использование'
+            'content' => 'Место использование',
+            'section' => 'Плагины'
         ]
     ]
 ];
