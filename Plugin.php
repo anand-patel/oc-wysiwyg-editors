@@ -18,7 +18,7 @@ class Plugin extends PluginBase
             'name'        => 'anandpatel.wysiwygeditors::lang.plugin.name',
             'description' => 'anandpatel.wysiwygeditors::lang.plugin.description',
             'author'      => 'Anand Patel',
-            'icon'        => 'icon-pencil-square',
+            'icon'        => 'icon-pencil-square-o',
             'homepage'    => 'https://github.com/anand-patel/oc-wysiwyg-editors'
         ];
     }
@@ -58,38 +58,12 @@ class Plugin extends PluginBase
                     throw new ApplicationException(Lang::get('cms::lang.theme.edit.not_found'));
                 }
 
-                if (PluginManager::instance()->hasPlugin('Radiantweb.Problog')) {
-                    $form->addFields([
-                        'radiant_problog_as_wysiwyg' => [
-                            'label'   => 'anandpatel.wysiwygeditors::lang.form.problog.label',
-                            'type'    => 'switch',
-                            'span'    => 'left',
-                            'default' => 'false',
-                            'comment' => 'anandpatel.wysiwygeditors::lang.form.problog.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
-                        ]
-                    ], 'primary');
-                }
-
-                if (PluginManager::instance()->hasPlugin('Radiantweb.Proevents')) {
-                    $form->addFields([
-                        'radiant_proevents_as_wysiwyg' => [
-                            'label'   => 'anandpatel.wysiwygeditors::lang.form.proevent.label',
-                            'type'    => 'switch',
-                            'span'    => 'left',
-                            'default' => 'false',
-                            'comment' => 'anandpatel.wysiwygeditors::lang.form.proevent.comment',
-                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
-                        ]
-                    ], 'primary');
-                }
-
                 if (PluginManager::instance()->hasPlugin('RainLab.Pages')) {
                     $form->addFields([
                         'static_page_as_wysiwyg' => [
                             'label'   => 'anandpatel.wysiwygeditors::lang.form.spages.label',
                             'type'    => 'switch',
-                            'span'    => 'left',
+                            'span'    => 'auto',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.spages.comment',
                             'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
@@ -102,9 +76,35 @@ class Plugin extends PluginBase
                         'blog_as_wysiwyg' => [
                             'label'   => 'anandpatel.wysiwygeditors::lang.form.blog.label',
                             'type'    => 'switch',
-                            'span'    => 'left',
+                            'span'    => 'auto',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.blog.comment',
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
+                        ]
+                    ], 'primary');
+                }
+
+                if (PluginManager::instance()->hasPlugin('Radiantweb.Problog')) {
+                    $form->addFields([
+                        'radiant_problog_as_wysiwyg' => [
+                            'label'   => 'anandpatel.wysiwygeditors::lang.form.problog.label',
+                            'type'    => 'switch',
+                            'span'    => 'auto',
+                            'default' => 'false',
+                            'comment' => 'anandpatel.wysiwygeditors::lang.form.problog.comment',
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
+                        ]
+                    ], 'primary');
+                }
+
+                if (PluginManager::instance()->hasPlugin('Radiantweb.Proevents')) {
+                    $form->addFields([
+                        'radiant_proevents_as_wysiwyg' => [
+                            'label'   => 'anandpatel.wysiwygeditors::lang.form.proevent.label',
+                            'type'    => 'switch',
+                            'span'    => 'auto',
+                            'default' => 'false',
+                            'comment' => 'anandpatel.wysiwygeditors::lang.form.proevent.comment',
                             'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
@@ -115,9 +115,22 @@ class Plugin extends PluginBase
                         'autumn_page_as_wysiwyg' => [
                             'label'   => 'anandpatel.wysiwygeditors::lang.form.apages.label',
                             'type'    => 'switch',
-                            'span'    => 'left',
+                            'span'    => 'auto',
                             'default' => 'false',
                             'comment' => 'anandpatel.wysiwygeditors::lang.form.apages.comment',
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
+                        ]
+                    ], 'primary');
+                }
+
+                if (PluginManager::instance()->hasPlugin('Indikator.Content')) {
+                    $form->addFields([
+                        'content_plus_as_wysiwyg' => [
+                            'label'   => 'anandpatel.wysiwygeditors::lang.form.cplus.label',
+                            'type'    => 'switch',
+                            'span'    => 'auto',
+                            'default' => 'false',
+                            'comment' => 'anandpatel.wysiwygeditors::lang.form.cplus.comment',
                             'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
                         ]
                     ], 'primary');
@@ -147,6 +160,14 @@ class Plugin extends PluginBase
             }
 
             else {
+                if (Settings::get('static_page_as_wysiwyg', false) && $form->model instanceof \RainLab\Pages\Classes\Page) {
+                    useWysiwyg($form);
+                }
+
+                if (Settings::get('blog_as_wysiwyg', false) && $form->model instanceof \RainLab\Blog\Models\Post) {
+                    useWysiwyg($form);
+                }
+
                 if (Settings::get('radiant_problog_as_wysiwyg', false) && $form->model instanceof \Radiantweb\Problog\Models\Post) {
                     useWysiwyg($form);
                 }
@@ -155,21 +176,18 @@ class Plugin extends PluginBase
                     useWysiwyg($form);
                 }
 
-                if (Settings::get('blog_as_wysiwyg', false) && $form->model instanceof \RainLab\Blog\Models\Post) {
-                    useWysiwyg($form);
-                }
-
                 if (Settings::get('autumn_page_as_wysiwyg', false) && $form->model instanceof \Autumn\Pages\Models\Page) {
                     useWysiwyg($form);
                 }
 
-                if (Settings::get('static_page_as_wysiwyg', false) && $form->model instanceof \RainLab\Pages\Classes\Page) {
+                if (Settings::get('content_plus_as_wysiwyg', false) && ($form->model instanceof \Indikator\Content\Models\Blog || $form->model instanceof \Indikator\Content\Models\News || $form->model instanceof \Indikator\Content\Models\Portfolio || $form->model instanceof \Indikator\Content\Models\Slideshow || $form->model instanceof \Indikator\Content\Models\Testimonials)) {
                     useWysiwyg($form);
                 }
             }
         });
 
-        function useWysiwyg($form) {
+        function useWysiwyg($form)
+        {
             $replacable = [
                 'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg', 'richeditor', 'RainLab\Blog\FormWidgets\BlogMarkdown'
             ];
