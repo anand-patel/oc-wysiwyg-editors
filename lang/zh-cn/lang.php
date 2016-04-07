@@ -75,6 +75,10 @@ return [
             'label' => '在Indikator Content Plus中使用?',
             'comment' => '在Indikator Content Plus插件中使用Wysiwyg'
         ],
+        'news' => [
+            'label' => '在Indikator News & Newsletter中使用?',
+            'comment' => '在Indikator News & Newsletter插件中使用Wysiwyg'
+        ],
         'tab' => [
             'settings' => '设置',
             'content' => '使用范围',

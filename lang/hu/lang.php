@@ -75,6 +75,10 @@ return [
             'label' => 'Az alábbi menüben: Tartalom',
             'comment' => 'Az Indikátor bővítményében.'
         ],
+        'news' => [
+            'label' => 'Az alábbi menüben: Hírek',
+            'comment' => 'Az Indikátor bővítményében.'
+        ],
         'tab' => [
             'settings' => 'Beállítások',
             'content' => 'Megjelenés',
