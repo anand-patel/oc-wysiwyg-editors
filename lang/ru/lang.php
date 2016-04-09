@@ -73,7 +73,11 @@ return [
         ],
         'cplus' => [
             'label' => 'Использовать в Indikator Content Plus?',
-            'comment' => 'Включить визуальный редактор в плагине Indikator Content Plus для редактирования записей'
+            'comment' => 'Включить визуальный редактор в плагине Indikator Content Plus для редактирования содержание'
+        ],
+        'news' => [
+            'label' => 'Использовать в Indikator News & Newsletter?',
+            'comment' => 'Включить визуальный редактор в плагине Indikator News & Newsletter для редактирования новости'
         ],
         'tab' => [
             'settings' => 'Настройки',

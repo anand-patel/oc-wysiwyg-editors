@@ -73,7 +73,11 @@ return [
         ],
         'cplus' => [
             'label' => 'Utilizar em Indikator Content Plus?',
-            'comment' => 'Permite usar no plugin Indikator Content Plus como editor de páginas'
+            'comment' => 'Permite usar no plugin Indikator Content Plus como editor de conteúdo'
+        ],
+        'news' => [
+            'label' => 'Utilizar em Indikator News & Newsletter?',
+            'comment' => 'Permite usar no plugin Indikator News & Newsletter como editor de notícia'
         ],
         'tab' => [
             'settings' => 'Definições',

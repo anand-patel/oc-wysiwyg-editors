@@ -73,7 +73,11 @@ return [
         ],
         'cplus' => [
             'label' => 'Use for Indikator Content Plus?',
-            'comment' => 'Use Wysiwyg editor in Indikator Content Plus plugin as page editor'
+            'comment' => 'Use Wysiwyg editor in Indikator Content Plus plugin as content editor'
+        ],
+        'news' => [
+            'label' => 'Use for Indikator News & Newsletter?',
+            'comment' => 'Use Wysiwyg editor in Indikator Content News & Newsletter as news editor'
         ],
         'tab' => [
             'settings' => 'Settings',

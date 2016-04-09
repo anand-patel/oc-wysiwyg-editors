@@ -73,7 +73,11 @@ return [
         ],
         'cplus' => [
             'label' => 'Použít pro Indikator Content Plus?',
-            'comment' => 'použije Wysiwyg editor pro Indikator Content Plus plugin jako editor článků'
+            'comment' => 'použije Wysiwyg editor pro Indikator Content Plus plugin jako editor obsah'
+        ],
+        'news' => [
+            'label' => 'Použít pro Indikator News & Newsletter?',
+            'comment' => 'použije Wysiwyg editor pro Indikator News & Newsletter plugin jako editor zprávy'
         ],
         'tab' => [
             'settings' => 'Nastavení editoru',

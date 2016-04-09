@@ -135,6 +135,19 @@ class Plugin extends PluginBase
                         ]
                     ], 'primary');
                 }
+
+                if (PluginManager::instance()->hasPlugin('Indikator.News')) {
+                    $form->addFields([
+                        'news_as_wysiwyg' => [
+                            'label'   => 'anandpatel.wysiwygeditors::lang.form.news.label',
+                            'type'    => 'switch',
+                            'span'    => 'auto',
+                            'default' => 'false',
+                            'comment' => 'anandpatel.wysiwygeditors::lang.form.news.comment',
+                            'tab'     => 'anandpatel.wysiwygeditors::lang.form.tab.content'
+                        ]
+                    ], 'primary');
+                }
             }
 
             if (Settings::get('cms_content_as_wysiwyg', false) && get_class($form->config->model) == 'Cms\Classes\Content') {
@@ -181,6 +194,10 @@ class Plugin extends PluginBase
                 }
 
                 if (Settings::get('content_plus_as_wysiwyg', false) && ($form->model instanceof \Indikator\Content\Models\Blog || $form->model instanceof \Indikator\Content\Models\News || $form->model instanceof \Indikator\Content\Models\Portfolio || $form->model instanceof \Indikator\Content\Models\Slideshow || $form->model instanceof \Indikator\Content\Models\Testimonials)) {
+                    useWysiwyg($form);
+                }
+
+                if (Settings::get('news_as_wysiwyg', false) && $form->model instanceof \Indikator\News\Models\Posts) {
                     useWysiwyg($form);
                 }
             }

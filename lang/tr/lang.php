@@ -75,6 +75,10 @@ return [
             'label' => 'Indikator Content Plus için kullanım',
             'comment' => 'Indikator Content Plus modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
         ],
+        'news' => [
+            'label' => 'Indikator News & Newsletter için kullanım',
+            'comment' => 'Indikator News & Newsletter modülünde gönderi editörü olarak seçilen Metin editörünü kullan'
+        ],
         'tab' => [
             'settings' => 'Ayarlar',
             'content' => 'İçerik',
