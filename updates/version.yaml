@@ -23,3 +23,4 @@
 1.2.1: Remove el-finder (Which fix issue of composer), added OC media manager support for image in TinyMCE & CkEditor, TinyMCE version updated, Fix Image upload for froala editor
 1.2.2: Add multilingual support, Add new languages, Update the Hungarian language, Add the missing English language files (Special thanks to Szabó Gergő)
 1.2.3: Added toolbar customization option (Special thanks to Szabó Gergő).
+1.2.4: Added support for Content Plus Plugin & News and Newsletter plugin(thanks to Szabó Gergő)
