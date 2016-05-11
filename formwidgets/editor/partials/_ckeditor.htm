@@ -8,7 +8,10 @@
                 language: '<?php echo $lang; ?>',
                 width:    '<?php echo $width; ?>',
                 height:   '<?php echo $height; ?>',
-                toolbar:  [<?php echo $toolbar_ckeditor; ?>]
+                toolbar:  [<?php echo $toolbar_ckeditor; ?>],
+                ocPageLink: {
+                  linksHandler: "<?php echo $this->getEventHandler('onGetPageLinks') ?>"
+                }
             });
         }
         

@@ -4,5 +4,5 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-    CKEDITOR.config.extraPlugins = 'ocmediamanager,ocmedialink,ocmediavideo,ocmediaaudio';
+    CKEDITOR.config.extraPlugins = 'ocmediamanager,ocpagelink,ocmedialink,ocmediavideo,ocmediaaudio';
 };
