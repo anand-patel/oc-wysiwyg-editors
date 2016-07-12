@@ -1,17 +1,22 @@
+<?php
+$tID = substr($this->getId('textarea'), 16) . time();
+?>
 <div data-control="wysiwyg">
-    <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+    <textarea name="<?php echo $name ?>" id="<?php echo $tID ?>" style="display: none"><?= e($value) ?></textarea>
 </div>
 <style>
-    #mceu_17 .mce-ico {
-        color: #c03f31!important;
+    .mce-tinymce .mce-ico {
+        color: #c03f31 !important;
     }
 </style>
 <script>
     function tinymceInit() {
+        $('#<?php echo $tID ?>').show();
+
         tinyMCE.baseURL = "<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce'); ?>";
         tinyMCE.suffix = '.min';
         tinymce.init({
-            selector: 'textarea#<?php echo $this->getId('textarea') ?>',
+            selector: 'textarea#<?php echo $tID ?>',
             language: '<?php echo $lang ?>',
             theme: 'modern',
             setup: function(editor) {
@@ -34,12 +39,22 @@
     $(document).ready(function() {
         if (typeof tinymce === 'undefined') {
             $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce/tinymce.min.js') ?>', function() {
-            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce/langs/'.$lang.'.js') ?>', function() {
-                tinymceInit();
-            }); });
+                $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce/langs/'.$lang.'.js') ?>', function() {
+                    setTimeout(function() {
+                        tinymceInit();
+                    }, 500);
+                }); });
         }
         else {
-            tinymceInit();
+            setTimeout(function() {
+                tinymceInit();
+            }, 500);
         }
+
+        $(document).on('focusin', function(e) {
+            if ($(e.target).closest(".mce-window").length) {
+                e.stopImmediatePropagation();
+            }
+        });
     });
 </script>
