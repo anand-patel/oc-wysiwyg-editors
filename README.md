@@ -1,12 +1,12 @@
 ## Select your favorite Wysiwyg Editor and start editing content
 Wysiwyg Editors is Form Widget plugin that can be used in backend for editing content.
 
-###List of wysiwyg editors included in plugin
+### List of wysiwyg editors included in plugin
 1. TinyMCE
 2. CKEditor
 3. Froala (build-in editor)
 
-###Features
+### Features
 * Automatic injection to October's core (Pages, Layout, Partials and Content).
 * Automatic injection to RainLab's plugins ([Blog](http://octobercms.com/plugin/rainlab-blog) and [Static Pages](http://octobercms.com/plugin/rainlab-pages)).
 * Automatic injection to Radiantweb's plugins ([ProBlog](http://octobercms.com/plugin/radiantweb-problog) and [ProEvents](http://octobercms.com/plugin/radiantweb-proevents)).
@@ -15,25 +15,25 @@ Wysiwyg Editors is Form Widget plugin that can be used in backend for editing co
 * One can configure editors as per their requirement from settings.
 * OC media manager integrated with CKEditor and TinyMCE for easy file browsing and uploading.
 
-###Usage
+### Usage
 The plugin can be use as content editor in CMS, Blogs, Pages, etc.
 
-###Like this plugin?
+### Like this plugin?
 If you like this plugin, give this plugin a Like or Make donation with PayPal.
 
-###Credits
+### Credits
 Wysiwyg editors by
 * [TinyMCE](https://www.tinymce.com)
 * [CKEditor](http://ckeditor.com)
 
-##Documentation
-###Installation
+## Documentation
+### Installation
 To install this plugin you have to click on __add to project__ or type __AnandPatel.WysiwygEditors__ in Backend *System > Updates > Install Plugin*
 
-###Configuration
+### Configuration
 To configure this plugin go to backend *Settings* then find *CMS* in left side bar, then click on *Wysiwyg Editors*, you will get configuration options (refer to screenshots).
 
-##FAQ
+## FAQ
 1. How to install this plugin?
 > Please refer Installation and configuration section.
 2. Who can use this plugin?
