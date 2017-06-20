@@ -195,13 +195,19 @@ class Plugin extends PluginBase
         function useWysiwyg($form)
         {
             $replacable = [
-                'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg', 'richeditor', 'RainLab\Blog\FormWidgets\BlogMarkdown', 'RainLab\Blog\FormWidgets\MLBlogMarkdown', 'mlricheditor'
+                'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg', 'richeditor', 'RainLab\Blog\FormWidgets\BlogMarkdown',
+                'RainLab\Blog\FormWidgets\MLBlogMarkdown', 'mlricheditor',
+            ];
+
+			$multilanguage = [
+                'RainLab\Blog\FormWidgets\MLBlogMarkdown', 'mlricheditor',
             ];
 
             foreach ($form->getFields() as $field) {
                 if (!empty($field->config['type']) && in_array($field->config['type'], $replacable)) {
                     if (Settings::instance()->editor == 'richeditor') {
-                        $field->config['type'] = $field->config['widget'] = 'richeditor';
+                    	$editor = in_array($field->config['type'], $multilanguage) ? 'mlricheditor' : 'richeditor';
+                        $field->config['type'] = $field->config['widget'] = $editor;
                     } else {
                         $field->config['type'] = $field->config['widget'] = 'AnandPatel\WysiwygEditors\FormWidgets\Editor';
                     }
