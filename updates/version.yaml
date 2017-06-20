@@ -26,3 +26,5 @@
 1.2.4: Added support for Content Plus Plugin & News and Newsletter plugin (thanks to Szabó Gergő)
 1.2.5: Minor improvements and bugfixes.
 1.2.6: Updated the CKEditor and TinyMCE editors.
+1.2.7: Show locale switcher when using multilocale editor.
+1.2.8: Added French language
