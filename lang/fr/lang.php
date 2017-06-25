@@ -15,7 +15,7 @@ return [
     ],
     'form' => [
         'settings' => [
-            'select_editor' => 'Sélectionnez l'éditeur',
+            'select_editor' => 'Sélectionnez l\'éditeur',
             'editor_width' => 'Largeur de l\'éditeur',
             'editor_height' => 'Hauteur de l\'éditeur',
             'toolbar_label' => 'Personnalisation de la barre d\'outils',
