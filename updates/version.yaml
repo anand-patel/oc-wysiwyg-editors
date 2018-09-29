@@ -28,3 +28,4 @@
 1.2.6: Updated the CKEditor and TinyMCE editors.
 1.2.7: Show locale switcher when using multilocale editor.
 1.2.8: Added French language
+1.2.9: Added permission for preferences
